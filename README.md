@@ -26,7 +26,7 @@
 </p>
 
 <h1>Funcionalidades e Demonstração da Aplicação</h1>
-`Funcionalidade 1`: Cadastro de Usuários
+`Funcionalidade 1` : Cadastro de Usuários
 - `Funcionalidade 2`: Login e Autenticação
 - `Funcionalidade 3`: Cronograma de Estudos
 - `Funcionalidade 4`: Teste Diagnóstico
