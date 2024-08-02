@@ -24,19 +24,19 @@
 
 
 # Funcionalidades e Demonstração da Aplicação
-`Funcionalidade 1`  : Cadastro de Usuários
-`Funcionalidade 2`  : Login e Autenticação
-`Funcionalidade 3`  : Cronograma de Estudos
-`Funcionalidade 4`  : Teste Diagnóstico
-`Funcionalidade 5`  : Cronograma Personalizado
-`Funcionalidade 6`  : Envio de Conteúdos
-`Funcionalidade 7`  : Aprovação de Conteúdos
-`Funcionalidade 8`  : Visualização de Conteúdos
-`Funcionalidade 9`  : Execução de Videoaulas
-`Funcionalidade 10` : Resolução de Questões
-`Funcionalidade 11` : Leitura de Resumos
-`Funcionalidade 12` : Avaliação de Conteúdos
-`Funcionalidade 13` : Monitoramento de Desempenho
+`Funcionalidade 1`  : Cadastro de Usuários <br>
+`Funcionalidade 2`  : Login e Autenticação <br>
+`Funcionalidade 3`  : Cronograma de Estudos <br>
+`Funcionalidade 4`  : Teste Diagnóstico <br>
+`Funcionalidade 5`  : Cronograma Personalizado <br>
+`Funcionalidade 6`  : Envio de Conteúdos <br>
+`Funcionalidade 7`  : Aprovação de Conteúdos <br>
+`Funcionalidade 8`  : Visualização de Conteúdos <br>
+`Funcionalidade 9`  : Execução de Videoaulas <br>
+`Funcionalidade 10` : Resolução de Questões <br>
+`Funcionalidade 11` : Leitura de Resumos <br>
+`Funcionalidade 12` : Avaliação de Conteúdos <br>
+`Funcionalidade 13` : Monitoramento de Desempenho <br>
 
 
 # Tecnologias Utilizadas
