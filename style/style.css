@@ -38,8 +38,7 @@ header menu a{
     color: var(--Black);
     text-align: center;
     font-size: 1.5rem;
-    margin-left: 5rem;
-    padding: 0rem 1rem 0rem 1rem ;
+    margin-left: 0rem;
     font-family: "League Spartan", sans-serif;
     font-weight: 400;
 }
@@ -104,7 +103,7 @@ main .text p{
     margin-top: 2rem;
     font-family: "League Spartan", sans-serif;
     font-weight: 300;
-    
+    color: var(--Gray);
 
 }
 
@@ -112,6 +111,7 @@ main .text p{
     position: absolute;
     z-index: -1;
     right: 75%;
+    top: 160%;
 }
 
 .instructions .destaque{
@@ -129,8 +129,53 @@ main .text p{
     font-family: "League Spartan", sans-serif;
     font-size: 2rem;
     font-weight: 500;
+    margin-top: 15vw;
 }
 
 .instructions .destaque .box{
     margin: auto;
+    
+}
+
+.instructions h4{
+    color: var(--Blue);
+    text-align: right;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    margin: 20rem 8rem 0rem 0rem;   
+    
+}
+
+.instructions #t1{
+    font-family: "League Spartan", sans-serif;
+    font-weight: 500;
+    margin: 0rem 8rem 0rem 0rem; 
+    text-align: right;
+}
+
+.steps{
+    display: flex;
+    flex-direction: row;
+    margin: 0rem 0rem 0rem 4rem;
+}
+
+.steps .step h1 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 400;
+    color: var(--Pink);
+    margin-right: 5rem;
+}
+
+.steps .step h2 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 300;
+    margin-right: 5rem;
+    
+}
+
+.steps .step p {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 200;
+    margin-right: 5rem;
+    color: var(--Gray);
 }
