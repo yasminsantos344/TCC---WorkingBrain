@@ -8,7 +8,7 @@
     --Baby-Yellow: #FEF7C3;
     --Black: #212429;
     --Gray: #495057;
-    --Light-Grey: #ACB5BD;
+    --Light-Grey: #E8E8E8;
     --Ice-White: #F2F2F2;
     --White: #FFFFFF;
 }
@@ -19,10 +19,6 @@ body{
 }
 
 
-
-<<<<<<< HEAD
-
-=======
 header menu a{
     text-decoration: none;
     color: var(--Black);
@@ -32,13 +28,9 @@ header menu a{
     font-family: "League Spartan", sans-serif;
     font-weight: 400;
 }
->>>>>>> aee76af98898deb56b804ee7d82c8d994cd4fa54
 
 header .lang{
-    margin-left: 13rem;
-    margin-right: 3rem;
-    display: flex;
-    flex-direction: row;
+    width: 20%;
 } header .lang button::selection{
     color: var(--Pink);
 }
@@ -57,7 +49,7 @@ header button{
 
 }
 
- #elipse10{
+ .elipse10{
     z-index: -1;;
     width: 100%;
     position:absolute;
@@ -84,6 +76,11 @@ main .text h1{
     margin-bottom: 2rem;
 }
 
+main .elipse10{
+    margin-top: 12vw;
+    margin: 0rem 0rem 0rem 0rem;
+}
+
 main .text p{
     margin-top: 2rem;
     font-family: "League Spartan", sans-serif;
@@ -92,12 +89,16 @@ main .text p{
 
 }
 
+
+
 #elipse9{
     position: absolute;
     z-index: -1;
     right: 75%;
     top: 160%;
 }
+
+
 
 .instructions .destaque{
     display: flex;
@@ -114,14 +115,55 @@ main .text p{
     font-family: "League Spartan", sans-serif;
     font-size: 2rem;
     font-weight: 500;
-    margin-top: 15vw;
+    margin-top: 12vw;
 }
 
 .instructions .destaque .box{
     margin: auto;
     
-<<<<<<< HEAD
-=======
+}
+
+.instructions h4{
+    color: var(--Blue);
+    text-align: right;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    
+    
+}
+
+.instructions #t1{
+    font-family: "League Spartan", sans-serif;
+    font-weight: 500;
+    margin: 0rem 8rem 0rem 0rem; 
+    text-align: right;
+}
+
+.steps{
+    display: flex;
+    flex-direction: row;
+    margin: 0rem 0rem 0rem 4rem;
+}
+
+.steps .step h1 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 400;
+    color: var(--Pink);
+    margin-right: 5rem;
+}
+
+.steps .step h2 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 300;
+    margin-right: 5rem;
+    
+}
+
+.steps .step p {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 200;
+    margin-right: 5rem;
+    color: var(--Gray);
 }
 
 .instructions h4{
@@ -165,49 +207,8 @@ main .text p{
     font-weight: 200;
     margin-right: 5rem;
     color: var(--Gray);
->>>>>>> aee76af98898deb56b804ee7d82c8d994cd4fa54
 }
 
-.instructions h4{
-    color: var(--Blue);
-    text-align: right;
-    font-family: "League Spartan", sans-serif;
-    font-weight: 700;
-    margin: 20rem 8rem 0rem 0rem;   
-    
+.vantagens{
+    background-color: var(--Gray);
 }
-
-.instructions #t1{
-    font-family: "League Spartan", sans-serif;
-    font-weight: 500;
-    margin: 0rem 8rem 0rem 0rem; 
-    text-align: right;
-}
-
-.steps{
-    display: flex;
-    flex-direction: row;
-    margin: 0rem 0rem 0rem 4rem;
-}
-
-.steps .step h1 {
-    font-family: "League Spartan", sans-serif;
-    font-weight: 400;
-    color: var(--Pink);
-    margin-right: 5rem;
-}
-
-.steps .step h2 {
-    font-family: "League Spartan", sans-serif;
-    font-weight: 300;
-    margin-right: 5rem;
-    
-}
-
-.steps .step p {
-    font-family: "League Spartan", sans-serif;
-    font-weight: 200;
-    margin-right: 5rem;
-    color: var(--Gray);
-}
-
