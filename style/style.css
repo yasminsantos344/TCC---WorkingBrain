@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
 
-*{
-    margin: 0rem 1rem 0rem 1rem;
-    box-sizing: border-box;
-}
-
 :root{
     --Pink: #F9A5A5;
     --Blue: #6893EF;
@@ -23,25 +18,9 @@ body{
     overflow-x: hidden;
 }
 
-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
 
-header #textworkingB{
-    padding-bottom: 2rem;
-}
 
-header menu a{
-    text-decoration: none;
-    color: var(--Black);
-    text-align: center;
-    font-size: 1.5rem;
-    margin-left: 0rem;
-    font-family: "League Spartan", sans-serif;
-    font-weight: 400;
-}
+
 
 header .lang{
     margin-left: 13rem;
@@ -81,15 +60,9 @@ main{
 }
 
 main .text{
-    margin-left: 7rem;
-    margin-top: 6rem;
     text-align: left;
 }
 
-main img{
-margin-top: 12vw;
-margin: 12rem 0rem 0rem 6rem ;
-}
 
 main .text h1{
     font-family: "League Spartan", sans-serif;
@@ -179,3 +152,4 @@ main .text p{
     margin-right: 5rem;
     color: var(--Gray);
 }
+
