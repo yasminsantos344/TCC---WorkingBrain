@@ -1,6 +1,6 @@
-# WorkingBraing
+# WorkingBrain
 
-![Logo ilustrativa](https://github.com/user-attachments/assets/c1621e8e-f759-480f-af8b-f4d4aa8234c0) ![Logo escrita](https://github.com/user-attachments/assets/725307e3-b8fa-4e86-b50e-eae22eeef6f3)
+![Logo](https://github.com/user-attachments/assets/2ac62d23-0484-4f99-bc62-f825702a780b)
 
 # Badges
 <img alt="Static Badge" src="https://img.shields.io/badge/Status-Desenvolvimento-%23%09008000"> <img alt="Static Badge" src="https://img.shields.io/badge/Vers%C3%A3o-01-%230000FF">

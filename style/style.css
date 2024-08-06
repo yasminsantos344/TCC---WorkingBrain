@@ -20,7 +20,19 @@ body{
 
 
 
+<<<<<<< HEAD
 
+=======
+header menu a{
+    text-decoration: none;
+    color: var(--Black);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-left: 0rem;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 400;
+}
+>>>>>>> aee76af98898deb56b804ee7d82c8d994cd4fa54
 
 header .lang{
     margin-left: 13rem;
@@ -108,6 +120,52 @@ main .text p{
 .instructions .destaque .box{
     margin: auto;
     
+<<<<<<< HEAD
+=======
+}
+
+.instructions h4{
+    color: var(--Blue);
+    text-align: right;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    margin: 20rem 8rem 0rem 0rem;   
+    
+}
+
+.instructions #t1{
+    font-family: "League Spartan", sans-serif;
+    font-weight: 500;
+    margin: 0rem 8rem 0rem 0rem; 
+    text-align: right;
+}
+
+.steps{
+    display: flex;
+    flex-direction: row;
+    margin: 0rem 0rem 0rem 4rem;
+}
+
+.steps .step h1 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 400;
+    color: var(--Pink);
+    margin-right: 5rem;
+}
+
+.steps .step h2 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 300;
+    margin-right: 5rem;
+    
+}
+
+.steps .step p {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 200;
+    margin-right: 5rem;
+    color: var(--Gray);
+>>>>>>> aee76af98898deb56b804ee7d82c8d994cd4fa54
 }
 
 .instructions h4{
