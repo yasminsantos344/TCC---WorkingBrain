@@ -1,4 +1,4 @@
-# WorkingBraing
+# WorkingBrain
 
 ![Logo](https://github.com/user-attachments/assets/2ac62d23-0484-4f99-bc62-f825702a780b)
 
