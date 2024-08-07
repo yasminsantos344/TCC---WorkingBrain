@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+.body{
+    background-color: #495057;
+    font-family:'Times New Roman', Times, serif;
+    color: #E8E8E8;
+}
+
+.link-voltar a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.header{
+    border-bottom: 1px white solid;
+    width: 90%;
+}
+
+.aside{
+    margin-left: 4.5rem;
+    font-family:'Times New Roman', Times, serif;
+    width: 15%;
+}
+
+.box{
+    margin-bottom: 5rem;
+}
+
+.linha{
+    width: 90%;
+    border: 0.5px white dotted;
+}
+
+.main{
+    border: 1px #F9A5A5 solid;
+    font-weight: 100;
+    width: 100;
+}
+
