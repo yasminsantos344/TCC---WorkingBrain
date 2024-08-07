@@ -209,6 +209,11 @@ main .text p{
     color: var(--Gray);
 }
 
-.vantagens{
-    background-color: var(--Gray);
+footer{
+    background-color: var(--Pink);
+}
+
+footer a{
+    text-decoration: none;
+    color: #212429;
 }
