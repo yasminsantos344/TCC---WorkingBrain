@@ -29,16 +29,33 @@ header menu a{
     font-weight: 400;
 }
 
-header .lang{
-    width: 20%;
-} header .lang button::selection{
-    color: var(--Pink);
+.login {
+    background-color: var(--Blue);
+    
+   
 }
-header .lang #pt{
-    border-right: var(--Black) solid 1px;
+.login a{
+    text-decoration: none;
+    color: var(--White);
 }
 
-header button:active{
+.login a:hover{
+    text-decoration: none;
+    box-shadow: 1px -1px 32px -11px rgba(104,147,239,1);
+    -webkit-box-shadow: 1px -1px 32px -11px rgba(104,147,239,1);
+    -moz-box-shadow: 1px -1px 32px -11px rgba(104,147,239,1);
+}
+
+.menu{
+    text-decoration: none;
+    color: var(--Black);
+}
+.menu a:hover{
+    text-decoration: underline;
+    color: var(--Pink);
+}
+
+header button a:active{
     color: var(--Pink);
 }
 
