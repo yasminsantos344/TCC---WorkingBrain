@@ -18,20 +18,9 @@ body{
     overflow-x: hidden;
 }
 
-
-header menu a{
-    text-decoration: none;
-    color: var(--Black);
-    text-align: center;
-    font-size: 1.5rem;
-    margin-left: 0rem;
-    font-family: "League Spartan", sans-serif;
-    font-weight: 400;
-}
-
 .login {
     background-color: var(--Blue);
-    
+    transition: .5s;
    
 }
 .login a{
@@ -46,9 +35,22 @@ header menu a{
     -moz-box-shadow: 1px -1px 32px -11px rgba(104,147,239,1);
 }
 
-.menu{
+.logo{
+    transition:  .5s;
+}
+
+.menu .a{
     text-decoration: none;
     color: var(--Black);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-left: 0rem;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 400;
+    margin-left: 4rem;
+    text-decoration: none;
+    color: var(--Black);
+    
 }
 .menu a:hover{
     text-decoration: underline;
@@ -85,17 +87,13 @@ main .text{
 }
 
 
-main .text h1{
+main .text .h1{
     font-family: "League Spartan", sans-serif;
     font-weight: 600;
     color: var(--Blue);
-    font-size: 5rem;
+    font-size: 5em;
     margin-bottom: 2rem;
-}
-
-main .elipse10{
-    margin-top: 12vw;
-    margin: 0rem 0rem 0rem 0rem;
+    transition: .5s;
 }
 
 main .text p{
@@ -103,6 +101,7 @@ main .text p{
     font-family: "League Spartan", sans-serif;
     font-weight: 300;
     color: var(--Gray);
+    transition: .5s;
 
 }
 
@@ -233,4 +232,28 @@ footer{
 footer a{
     text-decoration: none;
     color: #212429;
+}
+
+@media only screen and (max-width : 988px){
+    .logo{
+        transform: scale(0.8);
+       
+    }
+
+    main .text .h1{
+        text-align: center;
+        color: var(--Blue);
+        font-size: 3em;
+        margin-bottom: 2rem;
+    }
+
+    main .text p{
+        font-size: 1.5rem;
+    
+    }
+
+    .login{
+        transform: scale(1.2);
+        
+    }
 }
