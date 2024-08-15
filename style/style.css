@@ -117,8 +117,6 @@ main .text p{
 
 
 .instructions .destaque{
-    display: flex;
-    flex-direction: row;
     background-color: var(--White);
     justify-content: space-between;
     width: 80%;
@@ -155,11 +153,7 @@ main .text p{
     text-align: right;
 }
 
-.steps{
-    display: flex;
-    flex-direction: row;
-    margin: 0rem 0rem 0rem 4rem;
-}
+
 
 .steps .step h1 {
     font-family: "League Spartan", sans-serif;
@@ -198,11 +192,7 @@ main .text p{
     text-align: right;
 }
 
-.steps{
-    display: flex;
-    flex-direction: row;
-    margin: 0rem 0rem 0rem 4rem;
-}
+
 
 .steps .step h1 {
     font-family: "League Spartan", sans-serif;
@@ -235,12 +225,20 @@ footer a{
 }
 
 @media only screen and (max-width : 988px){
+    .main{
+        display: block;
+    }
+
+    *{
+        margin-left: 0;
+    }
+
     .logo{
         transform: scale(0.8);
        
     }
 
-    main .text .h1{
+    .main .text .h1{
         text-align: center;
         color: var(--Blue);
         font-size: 3em;
@@ -249,11 +247,39 @@ footer a{
 
     main .text p{
         font-size: 1.5rem;
-    
+        
+    }
+
+    .steps .step{
+        padding: 2rem;
+    }
+
+    .vantagem .img-vantagem{
+        width: 80%;
     }
 
     .login{
         transform: scale(1.2);
         
+    }
+
+    
+
+    .instructions .destaque{
+        background-color: transparent;
+        width: 90%;
+        -webkit-box-shadow: 0px 4px 4px 0px rgba(184, 184, 184, 0);
+        -moz-box-shadow: 0px 4px 4px 0px rgba(184, 184, 184, 0);
+        box-shadow: 0px 4px 4px 0px rgba(184, 184, 184, 0);
+    }
+
+    .instructions .box{
+        background-color: var(--White);
+        border-radius: 15px;
+        
+        -webkit-box-shadow: 0px 4px 4px 0px rgba(184,184,184,1);
+        -moz-box-shadow: 0px 4px 4px 0px rgba(184,184,184,1);
+        box-shadow: 0px 4px 4px 0px rgba(184,184,184,1);
+
     }
 }
