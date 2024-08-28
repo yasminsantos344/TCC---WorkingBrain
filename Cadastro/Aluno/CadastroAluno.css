@@ -112,7 +112,27 @@
     transition: ease-in-out 500ms;
 }
 
+.form-etapa4{
+    position: absolute;
+    top: 12vw;
+    left: 322vh;
+    opacity: 0;
+    transition: ease-in-out 500ms;
+}
 
+.resultado{
+    width: 60%;
+    z-index: 2;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: none;
+    padding: 2rem;
+}
 
 /* Animação */
 
@@ -127,6 +147,11 @@
 }
 
 .form-etapa1.modo-etapa2{
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.form-etapa3.modo-etapa4{
     opacity: 0;
     transform: translateX(-100%);
 }
@@ -146,6 +171,11 @@
     left: 0vh;
 }
 
+.form-etapa4.modo-etapa4{
+    opacity: 1;
+    left: 0vh;
+}
+
 .bola-etapa3.modo-etapa3{
     background-color: #6A95EF;
     border: 3px #6A95EF solid; 
@@ -153,6 +183,16 @@
 }
 
 .linha-etapa3.modo-etapa3{
+ background-color: #6A95EF;
+}
+
+.bola-etapa4.modo-etapa4{
+    background-color: #6A95EF;
+    border: 3px #6A95EF solid; 
+    color: white
+}
+
+.linha-etapa4.modo-etapa4{
  background-color: #6A95EF;
 }
 
@@ -165,6 +205,16 @@
 .form-etapa3{
     position: absolute;
     top: 12vw;
+}
+
+.form-etapa4{
+    position: absolute;
+    top: 12vw;
+}
+
+.resultado.ativo{
+    display: block;
+    transform: translateY(-70%);
 }
 
 /* Responsividade */
@@ -214,6 +264,16 @@
     .linha-etapa3.modo-etapa3{
      background-color: #6A95EF;
     }
+
+    .bola-etapa4.modo-etapa4{
+        background-color: #6A95EF;
+        border: 2px #6A95EF solid; 
+        color: white
+    }
+    
+    .linha-etapa4.modo-etapa4{
+     background-color: #6A95EF;
+    }
 }
 
 @media (max-width: 458px) {
@@ -241,6 +301,14 @@
     }
     
     .form-etapa3{
+        position: absolute;
+        top: 30vw;
+        left: 322vh;
+        opacity: 0;
+        transition: ease-in-out 500ms;
+    }
+
+    .form-etapa4{
         position: absolute;
         top: 30vw;
         left: 322vh;
