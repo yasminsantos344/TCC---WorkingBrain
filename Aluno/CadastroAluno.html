@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Aluno/css/CadastroAluno.css">
+    
+    <title>Faça sua matrícula</title>
+</head>
+<body class="body  align-items-center">
+    
+    <button class="voltar"><a href="../index.html"><img src="../assets/arrow_back_ios_new_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a></button>
+    
+    <div class="container container-fluid m-auto"> 
+        <div class="etapa  d-flex flex-row justify-content-around mt-3">
+            <div class="bola" style="background-color: #6A95EF; border: 3px #6A95EF solid; color: white">1</div>
+            <div class="linha"></div>
+
+            <div class="bola bola-etapa2">2</div>
+            <div class="linha linha-etapa3"></div>
+
+        </div>
+
+        <form  id="Cadastro" action="../ContrAluno.php" method="get" class="form container-fluid m-auto ">
+            <div class="form-etapa1 ">
+                    <h1 class="text-center">Sobre mim</h1>
+                    <div class="row ">
+                        <div class="coluna col- m-auto">
+                            <label for="nome">Nome:</label><br>
+                            <input type="text" name="Nome_Aluno" id="Nome_Aluno" placeholder="Digite seu nome"><br>
+            
+                            <label for="nome">Data de Nascimento:</label><br>
+                            <input type="date" name="Data_Nasc_Aluno" id="Data_Nascimento_Aluno" placeholder="DD/MM/AAAA"><br>
+
+                            <label for="nome">CPF:</label><br>
+                            <input type="number" name="CPF_Aluno" id="CPF_Aluno" placeholder="XXX.XXX.XXX-XX"><br>
+            
+                            <label for="celular">Celular:</label><br>
+                            <input type="number" name="Celular_Aluno" id="Celular_Aluno" placeholder="(DDD) 99999-9999"><br>
+                        </div>
+                        
+                        <div class="coluna col- m-auto">
+                            <label for="email">E-mail:</label><br>
+                            <input type="email" name="Email_Aluno" id="Email_Aluno" placeholder="Digite seu melhor email"><br>
+
+                            <label for="senha">Senha:</label><br>
+                            <input type="password" name="Senha_Aluno" id="Senha_Aluno" placeholder="Digite sua senha"><br>
+
+                            <label for="senha">Confirme a senha:</label><br>
+                            <input type="password" name="" id="Senha_Aluno_Confirmacao" placeholder="Confirme sua senha"><br>
+                        </div>
+
+                    <div class="campo-botao d-flex justify-content-center mb-3 mt-3">
+                        <input type="button" class="botao" id="passo1" value="Próximo">
+                    </div>
+                 </div> 
+            </div>
+
+            <div class="form-etapa2 form  container-fluid m-auto ">
+                    <h1 class="text-center">Informações</h1>
+                    <div class="row ">
+                        <div class="coluna col- m-auto">
+                            <label for="celular">CEP:</label><br>
+                            <input type="number" name="CEP_Aluno" id="CEP_Aluno" placeholder="(DDD) 99999-9999"><br>
+
+                            <label for="celular">Endereço:</label><br>
+                            <input type="number" name="Endereco_Aluno" id="CEP_Aluno" placeholder="(DDD) 99999-9999"><br>
+
+                            <label for="celular">CEP:</label><br>
+                            <input type="number" name="CEP_Aluno" id="CEP_Aluno" placeholder="(DDD) 99999-9999"><br>
+                        </div>
+            
+                        <div class="coluna col- m-auto">
+                            <label for="email">Número:</label><br>
+                            <input type="text" name="Endereco_Numero_Aluno" id="Endereco_Numero_Aluno" placeholder="Digite o numero do endereço"><br>
+
+                            <label for="email">Complemento:</label><br>
+                            <input type="text" name="Endereco_Complemento_Aluno" id="Endereco_Complemento_Aluno" placeholder="EX.: Bloco, "><br>
+                        </div>
+        
+                    </div>
+                    
+                    <div class="campo-botao d-flex justify-content-between mb-3 mt-3">
+                        <button class="voltar mr-5" id="voltar2" ><img src="../assets/arrow_back_ios_new_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="" srcset=""></button>
+                        <input type="button" value="Cadastrar" class="botao" id="CadastroAluno" name="CadastroAluno" onclick="CadastroAluno()">
+                    </div>
+            </div>
+    </form>
+    
+        <div id="resultado" class="resultado m-auto"></div>
+        <script src="../Aluno/js/CadastroAluno.js"></script>
+        <script src="../Aluno/js/AnimacaoCad.js"></script> 
+        
+</body>
+</html>
+

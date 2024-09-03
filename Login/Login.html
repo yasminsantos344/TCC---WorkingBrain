@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Login/css/login.css">
+    <title>login</title>
+</head>
+<body>
+    <div class="container">
+        <button class="voltar"><a href="../index.html"><img src="../Login/assets/arrow_back_ios_new_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a></button>
+        <div class="campo-forms">
+            <div class="Aluno-Professor">
+                    <div class="form form-Aluno">
+                        <h1 class="titulo">Entre como <b style="color:#6893EF; font-weight: 600;">Aluno</b>!</h1>
+
+                    <div class="campo-input">
+                        <label for="email">Email:</label><br>
+                        <input type="email" name="email" id="email" placeholder="Digite seu mail"><br>
+                    </div>
+                    
+                    <div class="campo-input">
+                        <label for="senha">Senha:</label><br>
+                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha"><br>
+                    </div>
+                    
+                    <input class="btn" type="button" value="Entrar"><br>
+
+                    <div class="campo-cadastro">
+                        <p>Não tem um cadastro?</p>
+                        <a href="../Aluno/CadastroAluno.html">Cadastre aqui</a>
+                    </div>
+                </div>
+
+
+                    <div class="form form-Professor">
+                            <h1 class="titulo">Entre como <b style="color:#F9A5A5; font-weight: 600;">Professor</b>!</h1>
+    
+                        <div class="campo-input">
+                            <label for="email">Email:</label><br>
+                            <input type="email" name="email" id="email" placeholder="Digite seu mail" style="border-color: #F9A5A5;"><br>
+                        </div>
+                        
+                        <div class="campo-input">
+                            <label for="senha">Senha:</label><br>
+                            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" style="border-color: #F9A5A5;"><br>
+                        </div>
+                        
+                        <input class="btn" type="button" value="Entrar"><br>
+    
+                        <div class="campo-cadastro">
+                            <p>Não tem um cadastro?</p>
+                            <a style="color: #F9A5A5;" href="../Professor/CadastroProfessor.html">Cadastre aqui</a>
+                        </div>
+
+            </div>
+            </div>  
+        </div>
+
+        <div class="campo-ilustracao">
+            <div class="ilustracao ilustracao-esquerda">
+                <div class="conteudo">
+                    <h3>É um Professor?</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam temporibus dolor facilis?</p>
+                    <button class="btn-ilustracao transparente" id="btnProfessor">
+                        Sign up
+                      </button>
+                </div>
+                <img src="../Login/assets/undraw_studying_re_deca.svg" class="imagem" alt="" srcset="">
+            </div>
+            <div class="ilustracao ilustracao-direita">
+                <div class="conteudo">
+                    <h3>É um Aluno?</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam temporibus dolor facilis?</p>
+                    <button class="btn-ilustracao transparente" id="btnAluno">
+                        Sign up
+                      </button>
+                </div>
+                <img src="../Login/assets/undraw_professor_re_mj1s.svg" class="imagem" alt="" srcset="">
+            </div>
+        </div>
+
+        <script src="../Login/js/Login.js"></script>
+        <script src="../Login/js/AmiacaoLogin.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+
+.body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(270deg, #F9A5A5 0%, #C31162 100%);
+    font-family: "League Spartan", sans-serif;
+    overflow-x: hidden;
+}
+
+.voltar{
+    background: transparent;
+    border: none;
+    margin-left: 0.3rem;
+    z-index: 9;
+}
+
+.voltar img{
+    width: 150%;
+    margin-top: 0.5rem;
+    padding: 0.1rem;
+}
+
+.container{
+    background-color: #dfdfdf;
+    width:90%;
+    height: min-content;
+    border-radius: 35px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.etapa .bola{
+    border: 3px #868686 solid;
+    border-radius: 50%;
+    padding: 2rem 2.5rem 2rem 2.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    transition: linear 500ms;
+}
+
+.etapa .linha{
+    height: 3px;
+    background-color: #868686;
+    width: 100%;
+    position:relative;
+    margin: auto;
+}
+
+.form label{
+    color: #868686;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.form .coluna input{
+    width: 100%;
+    height: 2.9rem;
+    border: none;
+    border-radius: 5px;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.form .coluna input::placeholder{
+    color: #868686;
+    font-weight: 700;
+}
+
+
+.form .options{
+    width: 22rem;
+    height: 2.9rem;
+    border: none;
+    border-radius: 5px;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    background: #fff ;
+}
+
+.campo-botao .botao{
+    height: 2.8rem;
+    width: 8rem;
+    border: none;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 600;
+    border-radius: 7px;
+    background-color: #C31162;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    transition: 500ms;
+}.campo-botao .botao:hover{
+    background-color: #C31162;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.446));
+    cursor: pointer;
+}
+
+.form-etapa1{
+    transition: ease-in-out 500ms;
+}
+
+.form-etapa2{
+    position: absolute;
+    top: 12vh;
+    left: 322vh;
+    opacity: 0;
+    transition: ease-in-out 500ms;
+}
+
+.form-etapa3{
+    position: absolute;
+    top: 12vw;
+    left: 322vh;
+    opacity: 0;
+    transition: ease-in-out 500ms;
+}
+
+.resultado{
+    width: 60%;
+    z-index: 2;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: none;
+    padding: 2rem;
+}
+
+
+/* Animação */
+
+.form-etapa2.modo-etapa2{
+    opacity: 1;
+    left: 0vh;
+}
+
+.form-etapa2.modo-etapa3{
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.form-etapa1.modo-etapa2{
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.bola-etapa2.modo-etapa2{
+    background-color: #C31162;
+    border: 3px #C31162 solid; 
+    color: white
+}
+
+.linha.modo-etapa2{
+ background-color: #C31162;
+}
+
+.form-etapa3.modo-etapa3{
+    opacity: 1;
+    left: 0vh;
+}
+
+.bola-etapa3.modo-etapa3{
+    background-color: #C31162;
+    border: 3px #C31162 solid; 
+    color: white
+}
+
+.linha-etapa3.modo-etapa3{
+ background-color: #C31162;
+}
+
+.form-etapa2{
+    position: absolute;
+    top: 12vw;
+
+}
+
+.form-etapa3{
+    position: absolute;
+    top: 12vw;
+}
+
+.resultado.ativo{
+    display: block;
+    transform: translateY(-70%);
+}
+/* Responsividade */
+
+@media (max-width: 918px) {
+    .body{
+        height: 80vh;
+    }
+
+    .etapa .bola{
+        border: 2px #868686 solid;
+        border-radius: 50%;
+        padding: 1rem 1.5rem 1rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    
+    .etapa .linha{
+        height: 2px;
+        background-color: #868686;
+
+    }
+
+    
+    
+
+    /* Animação */
+
+    .bola-etapa2.modo-etapa2{
+        background-color: #C31162;
+        border: 3px #C31162 solid; 
+        color: white
+    }
+    
+    .linha.modo-etapa2{
+     background-color: #C31162;
+    }
+}
+
+@media (max-width: 458px) {
+    .form label{
+        color: #868686;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    
+    .form .coluna input{
+        width: 16rem;
+    }
+
+    .form .options{
+        width: 16rem;
+
+    }
+
+    .form-etapa2{
+        position: absolute;
+        top: 20vh;
+        left: 322vh;
+        opacity: 0;
+        transition: ease-in-out 500ms;
+    }
+
+    .form-etapa3{
+        position: absolute;
+        top: 20vh;
+        left: 322vh;
+        opacity: 0;
+        transition: ease-in-out 500ms;
+    }
+    
+}

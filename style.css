@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+
+:root{
+    --Pink: #F9A5A5;
+    --Blue: #6893EF;
+    --Baby-Blue: #CAE8F3;
+    --Baby-Yellow: #FEF7C3;
+    --Black: #212429;
+    --Gray: #495057;
+    --Light-Grey: #E8E8E8;
+    --Ice-White: #F2F2F2;
+    --White: #FFFFFF;
+}
+
+body{
+    background-color: var(--Ice-White);
+    overflow-x: hidden;
+}
+
+.login {
+    background-color: var(--Blue);
+    transition: .5s;
+   
+}
+.login a{
+    text-decoration: none;
+    color: var(--White);
+}
+
+.login a:hover{
+    text-decoration: none;
+    box-shadow: 1px -1px 32px -11px rgba(104,147,239,1);
+    -webkit-box-shadow: 1px -1px 32px -11px rgba(104,147,239,1);
+    -moz-box-shadow: 1px -1px 32px -11px rgba(104,147,239,1);
+}
+
+.logo{
+    transition:  .5s;
+}
+
+.menu .a{
+    text-decoration: none;
+    color: var(--Black);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-left: 0rem;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 400;
+    margin-left: 4rem;
+    text-decoration: none;
+    color: var(--Black);
+    
+}
+.menu a:hover{
+    text-decoration: underline;
+    color: var(--Pink);
+}
+
+header button a:active{
+    color: var(--Pink);
+}
+
+header button{
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+
+}
+
+ .elipse10{
+    z-index: -1;;
+    width: 100%;
+    position:absolute;
+    left:63%;
+    top:-57%;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+main .text{
+    text-align: left;
+}
+
+
+main .text .h1{
+    font-family: "League Spartan", sans-serif;
+    font-weight: 600;
+    color: var(--Blue);
+    font-size: 5em;
+    margin-bottom: 2rem;
+    transition: .5s;
+}
+
+main .text p{
+    margin-top: 2rem;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 300;
+    color: var(--Gray);
+    transition: .5s;
+
+}
+
+
+
+#elipse9{
+    position: absolute;
+    z-index: -1;
+    right: 75%;
+    top: 160%;
+}
+
+
+
+.instructions .destaque{
+    background-color: var(--White);
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    height: 6vw;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(184,184,184,1);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(184,184,184,1);
+    box-shadow: 0px 4px 4px 0px rgba(184,184,184,1);
+    font-family: "League Spartan", sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 12vw;
+}
+
+.instructions .destaque .box{
+    margin: auto;
+    
+}
+
+.instructions h4{
+    color: var(--Blue);
+    text-align: right;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    
+    
+}
+
+.instructions #t1{
+    font-family: "League Spartan", sans-serif;
+    font-weight: 500;
+    margin: 0rem 8rem 0rem 0rem; 
+    text-align: right;
+}
+
+
+
+.steps .step h1 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 400;
+    color: var(--Pink);
+    margin-right: 5rem;
+}
+
+.steps .step h2 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 300;
+    margin-right: 5rem;
+    
+}
+
+.steps .step p {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 200;
+    margin-right: 5rem;
+    color: var(--Gray);
+}
+
+.instructions h4{
+    color: var(--Blue);
+    text-align: right;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    margin: 20rem 8rem 0rem 0rem;   
+    
+}
+
+.instructions #t1{
+    font-family: "League Spartan", sans-serif;
+    font-weight: 500;
+    margin: 0rem 8rem 0rem 0rem; 
+    text-align: right;
+}
+
+
+
+.steps .step h1 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 400;
+    color: var(--Pink);
+    margin-right: 5rem;
+}
+
+.steps .step h2 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 300;
+    margin-right: 5rem;
+    
+}
+
+.steps .step p {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 200;
+    margin-right: 5rem;
+    color: var(--Gray);
+}
+
+footer{
+    background-color: var(--Pink);
+}
+
+footer a{
+    text-decoration: none;
+    color: #212429;
+}
+
+@media only screen and (max-width : 988px){
+    .main{
+        display: block;
+    }
+
+    *{
+        margin-left: 0;
+    }
+
+    .logo{
+        transform: scale(0.8);
+       
+    }
+
+    .main .text .h1{
+        text-align: center;
+        color: var(--Blue);
+        font-size: 3em;
+        margin-bottom: 2rem;
+    }
+
+    main .text p{
+        font-size: 1.5rem;
+        
+    }
+
+    .steps .step{
+        padding: 2rem;
+    }
+
+    .vantagem .img-vantagem{
+        width: 80%;
+    }
+
+    .login{
+        transform: scale(1.2);
+        
+    }
+
+    
+
+    .instructions .destaque{
+        background-color: transparent;
+        width: 90%;
+        -webkit-box-shadow: 0px 4px 4px 0px rgba(184, 184, 184, 0);
+        -moz-box-shadow: 0px 4px 4px 0px rgba(184, 184, 184, 0);
+        box-shadow: 0px 4px 4px 0px rgba(184, 184, 184, 0);
+    }
+
+    .instructions .box{
+        background-color: var(--White);
+        border-radius: 15px;
+        
+        -webkit-box-shadow: 0px 4px 4px 0px rgba(184,184,184,1);
+        -moz-box-shadow: 0px 4px 4px 0px rgba(184,184,184,1);
+        box-shadow: 0px 4px 4px 0px rgba(184,184,184,1);
+
+    }
+}
