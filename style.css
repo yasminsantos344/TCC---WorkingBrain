@@ -82,6 +82,10 @@ main{
 
 }
 
+.main p{
+    text-indent: 1rem;
+}
+
 main .text{
     text-align: left;
 }
@@ -282,4 +286,18 @@ footer a{
         box-shadow: 0px 4px 4px 0px rgba(184,184,184,1);
 
     }
+
+    .footer{
+        
+    }
+
+    .footer-elementos h1{
+        font-size: 1.5rem;
+    }
+
+    .footer-elementos a{
+        font-size: 1rem;
+    }
+
+
 }

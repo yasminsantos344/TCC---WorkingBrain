@@ -2,6 +2,33 @@
 
 body{
     background-color: #FEF7C3;
+    
+}
+
+.objetivo-cronograma{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.objetivo{
+    padding: 1.5em;
+    background: rgba(255, 255, 255, 0.23);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-family: "League Spartan", sans-serif;
+    color: #5b5b5b;
+    margin: 1rem;
+}
+
+.data-limite{
+    padding: 1.5em;
+    background: rgba(255, 255, 255, 0.23);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-family: "League Spartan", sans-serif;
+    color: #5b5b5b;
+    margin: 1rem;
 }
 
 .cronograma{
