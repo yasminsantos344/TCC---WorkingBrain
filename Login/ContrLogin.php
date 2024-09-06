@@ -1,20 +1,20 @@
 <?php
 
-include_once "CLSRF04_RF05.php";
+include_once "CLSLogin.php";
 
-$RF045 = new Login;
+$Log = new Login;
 
 $email    = filter_input("GET", "email", FILTER_VALIDATE_EMAIL);
 $senha    = filter_input("GET", "senha");
 $ocupacao = filter_input("GET", "ocupacao");
 $botao    = filter_input("GET", "botao");
 
-$RF045 -> setemail($email);
-$RF045 -> setsenha($senha);
-$RF045 -> setocupacao($ocupacao);
+$Log -> setemail($email);
+$Log -> setsenha($senha);
+$Log -> setocupacao($ocupacao);
 
 if($botao == "login"){
-    $Dados = $RF045 -> Logar();
+    $Dados = $Log -> Logar();
 
     if(empty($Dados)){
         echo "Usuário inexistente!";
@@ -27,11 +27,11 @@ if($botao == "login"){
                     if($Dd['Email_Aluno'] == $email && $Dd['Senha_Aluno'] == $senha){
                         echo "<script>
                         document.location.replace(/* Home */);
-                        </script>"
+                        </script>";
                     }
                     else{
                         echo "<script>
-                            alert("Email ou senha incorretos");
+                            alert('Email ou senha incorretos');
                         </script>"
                     }
                 }
@@ -54,3 +54,4 @@ if($botao == "login"){
         
     }
 }
+

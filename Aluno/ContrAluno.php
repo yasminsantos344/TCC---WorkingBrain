@@ -1,9 +1,7 @@
 <?php
- 
-include_once "CLSCadastroProfessor.php";
+
 include_once "CLSCadastroAluno.php";
 
-$Cad = new Cadastro;
 $CadA = new CadastroAluno;
 
 //Aluno
@@ -16,8 +14,12 @@ $Senha_Aluno                = filter_input(INPUT_GET, "Senha_Aluno");
 $Celular_Aluno              = filter_input(INPUT_GET, "Celular_Aluno", FILTER_VALIDATE_INT);
 $CEP_Aluno                  = filter_input(INPUT_GET, "CEP_Aluno", FILTER_VALIDATE_INT);
 $Endereco_Aluno             = filter_input(INPUT_GET, "Endereco_Aluno");
+$Bairro_Aluno               = filter_input(INPUT_GET, "Bairro_Aluno");
+$Cidade_Aluno               = filter_input(INPUT_GET, "Cidade_Aluno");
+$UF_Aluno                   = filter_input(INPUT_GET, "UF_Aluno");
 $Endereco_Numero_Aluno      = filter_input(INPUT_GET, "Endereco_Numero_Aluno");
 $Endereco_Complemento_Aluno = filter_input(INPUT_GET, "Endereco_Complemento_Aluno");
+$botao                      = filter_input(INPUT_GET, "botao");
 
 $CadA -> setNome_Aluno($Nome_Aluno);
 $CadA -> setData_Nascimento_Aluno($Data_Nascimento_Aluno);
@@ -27,9 +29,17 @@ $CadA -> setSenha_Aluno($Senha_Aluno);
 $CadA -> setCelular_Aluno($Celular_Aluno);
 $CadA -> setCEP_Aluno($CEP_Aluno);
 $CadA -> setEndereco_Aluno($Endereco_Aluno);
+$CadA -> setBairro_Aluno($Endereco_Aluno);
+$CadA -> setCidade_Aluno($Endereco_Aluno);
+$CadA -> setUF_Aluno($Endereco_Aluno);
 $CadA -> setEndereco_Numero_Aluno($Endereco_Numero_Aluno);
 $CadA -> setEndereco_Complemento_Aluno($Endereco_Complemento_Aluno);
 
-if($botao == "matricular"){
+if($botao == 'Matricula'){
+    echo "passou php";
     echo $CadA -> Matricula();
+}
+
+else if(isset($_GET["Exclusao"])){
+    echo $CadA -> Exclusao();
 }

@@ -21,70 +21,71 @@
 
         </div>
 
-        <div class="form form-etapa1 container-fluid m-auto ">
-            <h1 class="text-center">Sobre mim</h1>
-            <div class="row ">
-                <div class="coluna col- m-auto">
-                    <label for="nome">Nome:</label><br>
-                    <input type="text" name="Nome_Professor" id="Nome_Professor" placeholder="Digite seu nome"><br>
-    
-                    <label for="nome">Data de Nascimento:</label><br>
-                    <input type="date" name="Data_Nascimento_Professor" id="Data_Nascimento_Professor" placeholder="DD/MM/AAAA"><br>
-
-                    <label for="nome">CPF:</label><br>
-                    <input type="number" name="CPF_Professor" id="CPF_Professor" placeholder="XXX.XXX.XXX-XX"><br>
-    
-                </div>
-    
-                <div class="coluna col- m-auto">
-                    <label for="celular">CEP:</label><br>
-                    <input type="number" name="CEP_Professor" id="CEP_Professor" placeholder="XXXXX-XXX"><br>
-    
-                    <label for="email">Número:</label><br>
-                    <input type="text" name="Endereco_Numero_Professor" id="Endereco_Numero_Professor" placeholder="Digite o numero do endereço"><br>
-
-                    <label for="email">Complemento:</label><br>
-                    <input type="text" name="Endereco_Complemento_Professor" id="Endereco_Complemento_Professor" placeholder="EX.: Bloco... "><br>
-                    
-                </div>
- 
-            </div>
-
-            <div class="campo-botao d-flex d-flex justify-content-center mb-3 mt-3">
-                <button class="botao" id="passo1">Próximo</button>
-            </div>
-
-        </div> 
+        <form action="../Professor/ContrProfessor.php" method="get" class="form container-fluid m-auto"></form>
+            <div class="form-etapa1  ">
+                <h1 class="text-center">Sobre mim</h1>
+                <div class="row ">
+                    <div class="coluna col- m-auto">
+                        <label for="nome">Nome:</label><br>
+                        <input type="text" name="Nome_Professor" id="Nome_Professor" placeholder="Digite seu nome"><br>
         
-        <div class="form-etapa2 form  container-fluid m-auto ">
-            <h1 class="text-center">Informações</h1>
-            <div class="row ">
-                <div class="coluna col- m-auto">
-                    <label for="celular">Celular:</label><br>
-                    <input type="number" name="Celular_Professor" id="Celular_Professor" placeholder="(DDD) 99999-9999"><br>
-    
-                    <label for="email">E-mail:</label><br>
-                    <input type="email" name="Email_Professor" id="Email_Professor" placeholder="Digite seu melhor email"><br>
+                        <label for="nome">Data de Nascimento:</label><br>
+                        <input type="date" name="Data_Nascimento_Professor" id="Data_Nascimento_Professor" placeholder="DD/MM/AAAA"><br>
+
+                        <label for="nome">CPF:</label><br>
+                        <input type="number" name="CPF_Professor" id="CPF_Professor" placeholder="XXX.XXX.XXX-XX"><br>
+        
+                    </div>
+        
+                    <div class="coluna col- m-auto">
+                        <label for="celular">CEP:</label><br>
+                        <input type="number" name="CEP_Professor" id="CEP_Professor" placeholder="XXXXX-XXX"><br>
+        
+                        <label for="email">Número:</label><br>
+                        <input type="text" name="Endereco_Numero_Professor" id="Endereco_Numero_Professor" placeholder="Digite o numero do endereço"><br>
+
+                        <label for="email">Complemento:</label><br>
+                        <input type="text" name="Endereco_Complemento_Professor" id="Endereco_Complemento_Professor" placeholder="EX.: Bloco... "><br>
+                        
+                    </div>
     
                 </div>
+
+                <div class="campo-botao d-flex d-flex justify-content-center mb-3 mt-3">
+                    <input type="button" value="Próximo" class="botao" id="passo1">
+                </div>
+
+            </div> 
+            
+            <div class="form-etapa2 form  container-fluid m-auto ">
+                <h1 class="text-center">Informações</h1>
+                <div class="row ">
+                    <div class="coluna col- m-auto">
+                        <label for="celular">Celular:</label><br>
+                        <input type="number" name="Celular_Professor" id="Celular_Professor" placeholder="(DDD) 99999-9999"><br>
+        
+                        <label for="email">E-mail:</label><br>
+                        <input type="email" name="Email_Professor" id="Email_Professor" placeholder="Digite seu melhor email"><br>
+        
+                    </div>
+        
+                    <div class="coluna col- m-auto">
+                        <label for="senha">Senha:</label><br>
+                        <input type="password" name="Senha_Professor" id="Senha_Professor" placeholder="Digite sua senha"><br>
+
+                        <label for="senha">Confirme a senha:</label><br>
+                        <input type="password" name="" id="Senha_Professor_Confirmacao" placeholder="Confirme sua senha"><br>
+                    </div>  
     
-                <div class="coluna col- m-auto">
-                    <label for="senha">Senha:</label><br>
-                    <input type="password" name="Senha_Professor" id="Senha_Professor" placeholder="Digite sua senha"><br>
+                </div>
 
-                    <label for="senha">Confirme a senha:</label><br>
-                    <input type="password" name="" id="Senha_Professor_Confirmacao" placeholder="Confirme sua senha"><br>
-                </div>  
- 
-            </div>
-
-            <div class="campo-botao d-flex d-flex justify-content-center mb-3 mt-3">
-                <button class="voltar mr-5" id="voltar2" ><img src="../Professor/assets/arrow_back_ios_new_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="" srcset=""></button>
-                <button class="botao" onclick="CadastroProfessor()" id="btnProfessor">Cadastrar</button>
-            </div>
-        </div> 
-           
-    </div>
+                <div class="campo-botao d-flex d-flex justify-content-center mb-3 mt-3">
+                    <button class="voltar mr-5" id="voltar2" ><img src="../Professor/assets/arrow_back_ios_new_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="" srcset=""></button>
+                    <button class="botao" onclick="SolicitaProfessor()" name="SolicitaProfessor" id="SolicitaProfessor">Cadastrar</button>
+                </div>
+            </div> 
+            
+        </div>
     
     <div id="resultado" class="resultado m-auto"></div>
     

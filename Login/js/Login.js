@@ -1,4 +1,6 @@
 function Login(){
+
+
     var email = document.getElementById("email").value;
     var senha = document.getElementById("senha").value;
     var ocupacao;
@@ -36,4 +38,13 @@ function Recuperacao(){
         xhttp.open("GET", "Contr?novaSenha="+senha+"&botao=recuperacao");
         xhttp.send();
     }
+}
+
+function LoginAluno(){
+   var LogAluno = $("#FormAluno").serialize();
+
+   $.ajax({
+    method: 'GET';
+    url: 'ContrLogin.php?'
+   })
 }

@@ -1,11 +1,6 @@
 <?php
 
-class Cadastro{
-
-    // Variáveis - Cadastro Aluno
-    
-
-
+class CadastroProfessor{
     // Variáveis - Cadastro Professor
     private $Nome_Professor;
     private $Data_Nascimento_Professor;
@@ -16,12 +11,6 @@ class Cadastro{
     private $CEP_Professor;
     private $Endereco_Numero_Professor;
     private $Endereco_Complemento_Professor;
-
-
-    // Get Set - Alunos
-
-    
-
 
      // Get Set - Professor
 
@@ -95,17 +84,6 @@ class Cadastro{
 
     public function setEndereco_Complemento_Professor($Endereco_Complemento_Professor){
         $this -> Endereco_Complemento_Professor = $Endereco_Complemento_Professor;
-    }
-
-
-    // Método - Matrícula
-
-    
-
-    //Método - Solicitar
-
-    public function Solicitar(){
-        
     }
 
     //Método - Cadastrar

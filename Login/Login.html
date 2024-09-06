@@ -11,28 +11,30 @@
         <button class="voltar"><a href="../index.html"><img src="../Login/assets/arrow_back_ios_new_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a></button>
         <div class="campo-forms">
             <div class="Aluno-Professor">
+                <form action="../Login/ContrLogin.php" method="get" class="form" id="FormAluno">
                     <div class="form form-Aluno">
-                        <h1 class="titulo">Entre como <b style="color:#6893EF; font-weight: 600;">Aluno</b>!</h1>
+                            <h1 class="titulo">Entre como <b style="color:#6893EF; font-weight: 600;">Aluno</b>!</h1>
 
-                    <div class="campo-input">
-                        <label for="email">Email:</label><br>
-                        <input type="email" name="email" id="email" placeholder="Digite seu mail"><br>
+                        <div class="campo-input">
+                            <label for="email">Email:</label><br>
+                            <input type="email" name="email" id="email" placeholder="Digite seu mail"><br>
+                        </div>
+                        
+                        <div class="campo-input">
+                            <label for="senha">Senha:</label><br>
+                            <input type="password" name="senha" id="senha" placeholder="Digite sua senha"><br>
+                        </div>
+                        
+                        <input class="btn" id="LoginAluno" type="button" value="Entrar" onclick="LoginAluno()"><br>
+
+                        <div class="campo-cadastro">
+                            <p>Não tem um cadastro?</p>
+                            <a href="../Aluno/CadastroAluno.html">Cadastre aqui</a>
+                        </div>
                     </div>
-                    
-                    <div class="campo-input">
-                        <label for="senha">Senha:</label><br>
-                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha"><br>
-                    </div>
-                    
-                    <input class="btn" type="button" value="Entrar"><br>
+                </form>
 
-                    <div class="campo-cadastro">
-                        <p>Não tem um cadastro?</p>
-                        <a href="../Aluno/CadastroAluno.html">Cadastre aqui</a>
-                    </div>
-                </div>
-
-
+                <form action="../Login/ContrLogin.php" method="get" class="form" id="FormProfessor">
                     <div class="form form-Professor">
                             <h1 class="titulo">Entre como <b style="color:#F9A5A5; font-weight: 600;">Professor</b>!</h1>
     
@@ -46,14 +48,14 @@
                             <input type="password" name="senha" id="senha" placeholder="Digite sua senha" style="border-color: #F9A5A5;"><br>
                         </div>
                         
-                        <input class="btn" type="button" value="Entrar"><br>
+                        <input class="btn" id="LoginProfessor" type="button" value="Entrar" onclick="LoginProfessor()"><br>
     
                         <div class="campo-cadastro">
                             <p>Não tem um cadastro?</p>
                             <a style="color: #F9A5A5;" href="../Professor/CadastroProfessor.html">Cadastre aqui</a>
                         </div>
-
-            </div>
+                    </div>
+                </form>
             </div>  
         </div>
 

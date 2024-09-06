@@ -19,11 +19,10 @@
             <div class="linha"></div>
 
             <div class="bola bola-etapa2">2</div>
-            <div class="linha linha-etapa3"></div>
 
         </div>
 
-        <form  id="Cadastro" action="../ContrAluno.php" method="get" class="form container-fluid m-auto ">
+        <form  id="Cadastro" action="" method="get" class="form container-fluid m-auto ">
             <div class="form-etapa1 ">
                     <h1 class="text-center">Sobre mim</h1>
                     <div class="row ">
@@ -62,17 +61,28 @@
                     <h1 class="text-center">Informações</h1>
                     <div class="row ">
                         <div class="coluna col- m-auto">
-                            <label for="celular">CEP:</label><br>
-                            <input type="number" name="CEP_Aluno" id="CEP_Aluno" placeholder="(DDD) 99999-9999"><br>
 
-                            <label for="celular">Endereço:</label><br>
-                            <input type="number" name="Endereco_Aluno" id="CEP_Aluno" placeholder="(DDD) 99999-9999"><br>
+                            <span id="cpf_spam" style="color: red;"></span>
+                            <label for="CEP">CEP:</label><br>
+                            <input type="number" name="CEP_Aluno" id="CEP_Aluno" placeholder="XXXXXXXX"><br>
 
-                            <label for="celular">CEP:</label><br>
-                            <input type="number" name="CEP_Aluno" id="CEP_Aluno" placeholder="(DDD) 99999-9999"><br>
+                            <label for="Endereco">Endereço:</label><br>
+                            <input type="text" name="Endereco_Aluno" id="Endereco_Aluno" placeholder="Rua A, Bairro B"><br>
+
+                            <label for="Bairro">Bairro:</label><br>
+                            <input type="text" name="Bairro_Aluno" id="Bairro_Aluno" placeholder="Ex.: SP, BA..."><br>
+                            
                         </div>
             
                         <div class="coluna col- m-auto">
+
+                            <label for="email">Cidade:</label><br>
+                            <input type="text" name="Cidade_Aluno" id="Cidade_Aluno" placeholder="Digite o numero do endereço"><br>
+
+                            <label for="email">UF:</label><br>
+                            <input type="text" name="UF_Aluno" id="UF_Aluno" placeholder="Digite o numero do endereço"><br>
+                        
+
                             <label for="email">Número:</label><br>
                             <input type="text" name="Endereco_Numero_Aluno" id="Endereco_Numero_Aluno" placeholder="Digite o numero do endereço"><br>
 
@@ -83,18 +93,18 @@
                     </div>
                     
                     <div class="campo-botao d-flex justify-content-between mb-3 mt-3">
-                        <button class="voltar mr-5" id="voltar2" ><img src="../assets/arrow_back_ios_new_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="" srcset=""></button>
-                        <input type="button" value="Cadastrar" class="botao" id="CadastroAluno" name="CadastroAluno">
-                        <!-- <input type="button" value="Cadastrar" class="botao" id="CadastroAluno" name="CadastroAluno" onclick="CadastroAluno()"> --> 
+                        <button class="voltar mr-5" id="voltar2" ><img src="" alt="" srcset=""></button>
+                        <input type="button" value="Cadastrar" class="botao" id="CadastroAluno" name="Matricula" value="Matricula" onclick="FCadastroAluno()"> 
+
+
                     </div>
             </div>
     </form>
-    
-<!-- Testando github -->
 
         <div id="resultado" class="resultado m-auto"></div>
-        <script src="../Aluno/js/CadastroAluno.js"></script>
-        <script src="../Aluno/js/AnimacaoCad.js"></script> 
+
+<script src="../Aluno/js/CadastroAluno.js"></script>
+<script src="../Aluno/js/AnimacaoCad.js"></script> 
         
 </body>
 </html>

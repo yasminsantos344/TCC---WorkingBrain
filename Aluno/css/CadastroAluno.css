@@ -42,7 +42,7 @@
 .etapa .linha{
     height: 3px;
     background-color: #868686;
-    width: 40%;
+    width: 100%;
     position:relative;
     margin: auto;
 }
@@ -106,7 +106,7 @@
 
 .form-etapa3{
     position: absolute;
-    top: 12vw;
+    top: auto;
     left: 322vh;
     opacity: 0;
     transition: ease-in-out 500ms;
@@ -198,7 +198,7 @@
 
 .form-etapa2{
     position: absolute;
-    top: 12vw;
+    top: 0;
 
 }
 
@@ -235,7 +235,7 @@
     .etapa .linha{
         height: 2px;
         background-color: #868686;
-        width: 40%;
+        width: 100%;
         position:relative;
         margin: auto;
     }
