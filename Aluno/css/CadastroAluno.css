@@ -4,7 +4,7 @@
 .body{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(270deg, #CAE8F3 0%, #6893EF 100%);
+    background: linear-gradient(270deg, #c9e8f3 0%, #6893EF 100%);
     font-family: "League Spartan", sans-serif;
     overflow-x: hidden;
 }

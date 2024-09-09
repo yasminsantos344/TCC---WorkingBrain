@@ -1,5 +1,9 @@
 create database DB_WorkingBrain;
 
+drop database DB_WorkingBrain;
+
+drop table TB_Aluno;
+
 use DB_WorkingBrain;
 
 create table TB_ADM(
@@ -16,14 +20,18 @@ select * from TB_ADM;
 create table TB_Aluno(
 Matricula_Aluno int auto_increment primary key,
 Hora_Matricula_Aluno datetime,
-Nome_Aluno varchar (60) not null,
-Data_Nascimento_Aluno date not null,
-CPF_Aluno int unique not null,
-Email_Aluno varchar (40) not null,
-Senha_Aluno varchar (20) not null,
-Celular_Aluno varchar (15) not null,
-CEP_Aluno varchar (9) not null,
-Endereco_Numero_Aluno varchar (6) not null,
+Nome_Aluno varchar (60),
+Data_Nascimento_Aluno date,
+CPF_Aluno bigint,
+Email_Aluno varchar (40),
+Senha_Aluno varchar (20),
+Celular_Aluno varchar (15),
+CEP_Aluno varchar (9),
+Endereco_Aluno varchar (30),
+Bairro_Aluno varchar (20),
+Cidade_Aluno varchar (20),
+UF_Aluno char (2),
+Endereco_Numero_Aluno varchar (6),
 Endereco_Complemento_Aluno varchar (20));
 
 select * from TB_Aluno;

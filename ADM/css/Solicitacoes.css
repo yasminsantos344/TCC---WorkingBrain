@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+.body{
+    background-color: #F1E3E4;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    font-family: "League Spartan", sans-serif;
+}
+
+.aside{
+    background-color: #A288A6;
+    width: 5%;
+    z-index: 3;
+    border-top-right-radius:15px ;
+    border-bottom-right-radius:15px ;
+    transition: 700ms ease-in-out;
+}
+
+.aside:hover{
+    width: 25%;
+    z-index: 3;
+}
+
+.main{
+    margin: 1rem 0;
+}
+
+.header{
+    border-bottom: 1px #CCBCBC solid;
+    padding: 0 0 0.5rem ;
+    font-weight: 800;
+}
+
+
+.pesquisa{
+    border-right: 1px #CCBCBC solid;
+    height: 100%;
+}
+
+.pesquisa input{
+    height:  3.5625rem;
+    width: 50.0625rem;
+    background: #CCBCBC;
+    border: 2px solid #A288A6;
+    border-radius: 5px;
+}
+
+.botao{
+    height: 3.5rem;
+    border-radius: 5px;
+    border: none;
+    margin-left: 0.5rem;
+}.botaoAdicionar{
+    background-color: #B6BB9B;
+    font-weight: 600;
+    width: 10rem;
+}.botaoExcluir{
+    background-color: #BD9090;
+    font-weight: 600;
+    width: 10rem;
+}.botaoEditar{
+    background-color: #90B0BD;
+    font-weight: 600;
+    width:  6rem;
+}

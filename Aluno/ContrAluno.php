@@ -19,7 +19,6 @@ $Cidade_Aluno               = filter_input(INPUT_GET, "Cidade_Aluno");
 $UF_Aluno                   = filter_input(INPUT_GET, "UF_Aluno");
 $Endereco_Numero_Aluno      = filter_input(INPUT_GET, "Endereco_Numero_Aluno");
 $Endereco_Complemento_Aluno = filter_input(INPUT_GET, "Endereco_Complemento_Aluno");
-$botao                      = filter_input(INPUT_GET, "botao");
 
 $CadA -> setNome_Aluno($Nome_Aluno);
 $CadA -> setData_Nascimento_Aluno($Data_Nascimento_Aluno);
@@ -29,14 +28,13 @@ $CadA -> setSenha_Aluno($Senha_Aluno);
 $CadA -> setCelular_Aluno($Celular_Aluno);
 $CadA -> setCEP_Aluno($CEP_Aluno);
 $CadA -> setEndereco_Aluno($Endereco_Aluno);
-$CadA -> setBairro_Aluno($Endereco_Aluno);
-$CadA -> setCidade_Aluno($Endereco_Aluno);
-$CadA -> setUF_Aluno($Endereco_Aluno);
+$CadA -> setBairro_Aluno($Bairro_Aluno);
+$CadA -> setCidade_Aluno($Cidade_Aluno);
+$CadA -> setUF_Aluno($UF_Aluno);
 $CadA -> setEndereco_Numero_Aluno($Endereco_Numero_Aluno);
 $CadA -> setEndereco_Complemento_Aluno($Endereco_Complemento_Aluno);
 
-if($botao == 'Matricula'){
-    echo "passou php";
+if(isset($_GET["Matricula"])){
     echo $CadA -> Matricula();
 }
 

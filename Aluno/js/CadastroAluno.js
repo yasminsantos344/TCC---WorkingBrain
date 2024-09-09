@@ -7,29 +7,33 @@ function FCadastroAluno (){
 
 
     if(verificacaoCPF() == 'válido'){
+        var resposta = document.querySelector('.resultado');
+
         if(senha == confirmacao){
-            console.log('passou!!!');
             var DadosAluno = $('#Cadastro').serialize();
         
             $.ajax({
-                method: 'Get',
+                method: 'GET',
                 url:    'ContrAluno.php?Matricula',
                 data:   DadosAluno,
         
                 beforeSend: function(){
+                    resposta.classList.add("ativo");
                     $("#resultado").html("Carregando matrículas...");
                 }
             }) 
         
             .done(function(dadosPHP){
                 $("#resultado").html(dadosPHP);
+                resposta.classList.add("ativo");
             })
         
             .fail(function(){
                 $("#resultado").html("Falha na matrícula");
+                resposta.classList.add("ativo");  
             })
             
-        console.table(DadosAluno);
+            return false;
         }
 
         else{
@@ -61,6 +65,7 @@ function Exclusao(){
         }) 
     
         .done(function(dadosPHP){
+            
             $("#resultado").html(dadosPHP);
         })
     

@@ -13,6 +13,10 @@
     --White: #FFFFFF;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body{
     background-color: var(--Ice-White);
     overflow-x: hidden;
