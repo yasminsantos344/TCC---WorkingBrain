@@ -26,6 +26,6 @@ $CadP -> setCEP_Professor($CEP_Professor);
 $CadP -> setEndereco_Numero_Professor($Endereco_Numero_Professor);
 $CadP -> setEndereco_Complemento_Professor($Endereco_Complemento_Professor);
 
-if($botao == "cadastrar"){
+if(isset($_GET["Cadastrar"])){
     echo $CadP -> Cadastrar();
 }
