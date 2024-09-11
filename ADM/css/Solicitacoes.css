@@ -64,3 +64,12 @@
     font-weight: 600;
     width:  6rem;
 }
+
+.box-solicitacoes{
+    height: 100%;
+}
+
+.DivSolicitao{
+    background-color: aqua;
+    color: coral;
+}

@@ -99,19 +99,13 @@
 
 .form-etapa2{
     position: absolute;
-    top: 12vh;
+    top: 0vh;
     left: 322vh;
     opacity: 0;
     transition: ease-in-out 500ms;
 }
 
-.form-etapa3{
-    position: absolute;
-    top: 12vw;
-    left: 322vh;
-    opacity: 0;
-    transition: ease-in-out 500ms;
-}
+
 
 .resultado{
     width: 60%;

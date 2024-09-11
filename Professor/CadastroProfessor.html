@@ -22,7 +22,7 @@
 
         </div>
 
-        <form action="../Professor/ContrProfessor.php" method="get" class="form container-fluid m-auto"></form>
+        <form action="" method="get" class="form container-fluid m-auto" id="CadastroProf">
             <div class="form-etapa1  form">
                 <h1 class="text-center">Sobre mim</h1>
                 <div class="row ">
@@ -35,63 +35,90 @@
 
                         <label for="nome">CPF:</label><br>
                         <input type="number" name="CPF_Professor" id="CPF_Professor" placeholder="XXX.XXX.XXX-XX"><br>
+
+                        <label for="celular">Celular:</label>
+                        <input type="number" name="Celular_Professor" id="Celular_Professor">
         
                     </div>
         
                     <div class="coluna col- m-auto">
-                        <label for="celular">CEP:</label><br>
-                        <input type="number" name="CEP_Professor" id="CEP_Professor" placeholder="XXXXX-XXX"><br>
-        
-                        <label for="email">Número:</label><br>
-                        <input type="text" name="Endereco_Numero_Professor" id="Endereco_Numero_Professor" placeholder="Digite o numero do endereço"><br>
-
-                        <label for="email">Complemento:</label><br>
-                        <input type="text" name="Endereco_Complemento_Professor" id="Endereco_Complemento_Professor" placeholder="EX.: Bloco... "><br>
-                        
-                    </div>
-    
-                </div>
-
-                <div class="campo-botao d-flex d-flex justify-content-center mb-3 mt-3">
-                    <input type="button" value="Próximo" class="botao" id="passo1">
-                </div>
-
-            </div> 
-            
-            <div class="form-etapa2 form  container-fluid m-auto ">
-                <h1 class="text-center">Informações</h1>
-                <div class="row ">
-                    <div class="coluna col- m-auto">
-                        <label for="celular">Celular:</label><br>
-                        <input type="number" name="Celular_Professor" id="Celular_Professor" placeholder="(DDD) 99999-9999"><br>
-        
                         <label for="email">E-mail:</label><br>
                         <input type="email" name="Email_Professor" id="Email_Professor" placeholder="Digite seu melhor email"><br>
         
-                    </div>
-        
-                    <div class="coluna col- m-auto">
                         <label for="senha">Senha:</label><br>
                         <input type="password" name="Senha_Professor" id="Senha_Professor" placeholder="Digite sua senha"><br>
 
                         <label for="senha">Confirme a senha:</label><br>
                         <input type="password" name="" id="Senha_Professor_Confirmacao" placeholder="Confirme sua senha"><br>
-                    </div>  
+                    </div>
+                                               
+                 </div>
+
+                 <div class="campo-botao d-flex d-flex justify-content-center mb-3 mt-3">
+                    <input type="button" value="Próximo" class="botao" id="passo1">
+                </div>
     
                 </div>
 
-                <div class="campo-botao d-flex d-flex justify-content-center mb-3 mt-3">
-                    <button class="voltar mr-5" id="voltar2" ><img src="../Professor/assets/arrow_back_ios_new_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="" srcset=""></button>
-                    <button class="botao" onclick="SolicitaProfessor()" name="SolicitaProfessor" id="SolicitaProfessor">Cadastrar</button>
-                </div>
+               
+
+                <div class="form-etapa2 form  container-fluid m-auto ">
+                    <h1 class="text-center">Informações</h1>
+                    <div class="row ">
+                        <div class="coluna col- m-auto">
+    
+                            <span id="cpf_spam" style="color: red;"></span>
+                            <label for="celular">CEP:</label><br>
+                            <input type="number" name="CEP_Professor" id="CEP_Professor" placeholder="XXXXX-XXX"><br>
+    
+                            <label for="Endereco">Endereço:</label><br>
+                            <input type="text" name="Endereco_Professor" id="Endereco_Professor" placeholder="Rua A, Bairro B"><br>
+    
+                            <label for="Bairro">Bairro:</label><br>
+                            <input type="text" name="Bairro_Professor" id="Bairro_Professor" placeholder="Ex.: SP, BA..."><br>
+    
+    
+                        </div>  
+    
+                        <div class="coluna col- m-auto">
+                            <label for="email">Cidade:</label><br>
+                            <input type="text" name="Cidade_Professor" id="Cidade_Professor" placeholder="Digite o numero do endereço"><br>
+    
+                            <label for="email">UF:</label><br>
+                            <input type="text" name="UF_Professor" id="UF_Professor" placeholder="Digite o numero do endereço"><br>
+            
+                            <label for="email">Número:</label><br>
+                            <input type="text" name="Endereco_Numero_Professor" id="Endereco_Numero_Professor" placeholder="Digite o numero do endereço"><br>
+    
+                            <label for="email">Complemento:</label><br>
+                            <input type="text" name="Endereco_Complemento_Professor" id="Endereco_Complemento_Professor" placeholder="EX.: Bloco... "><br>
+                        </div>
+                            
+                            
+                            
+                        </div>
+
+                        <div class="campo-botao d-flex d-flex justify-content-center mb-3 mt-3">
+                            <button class="voltar mr-5" id="voltar2" ><img src="../Professor/assets/arrow_back_ios_new_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="" srcset=""></button>
+                            <button class="botao" onclick="SolicitaProfessor()" name="SolicitaProfessor" id="SolicitaProfessor">Cadastrar</button>
+                        </div>
+        
+                    </div>
+    
+                    
+                </div> 
+                
+            
+            </form>
+
             </div> 
             
-        </div>
+           
+    </div>       
     
     <div id="resultado" class="resultado m-auto"></div>
     
     <script src="../Professor/js/Cadastro.js"></script>
     <script src="../Professor/js/AnimacaoCad.js"></script> 
-    <script src="../ADM/js/Solicitacao.js"></script>
 </body>
 </html>

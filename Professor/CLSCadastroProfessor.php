@@ -9,6 +9,10 @@ class CadastroProfessor{
     private $Senha_Professor;
     private $Celular_Professor;
     private $CEP_Professor;
+    private $Endereco_Professor;
+    private $Bairro_Professor;
+    private $Cidade_Professor;
+    private $UF_Professor;
     private $Endereco_Numero_Professor;
     private $Endereco_Complemento_Professor;
 
@@ -70,6 +74,38 @@ class CadastroProfessor{
         $this -> CEP_Professor = $CEP_Professor;
     }
 
+    public function getEndereco_Professor(){
+        return($this -> Endereco_Professor);
+    }
+
+    public function setEndereco_Professor($Endereco_Professor){
+        $this -> Endereco_Professor = $Endereco_Professor;
+    }
+
+    public function getBairro_Professor(){
+        return($this -> Bairro_Professor);
+    }
+
+    public function setBairro_Aluno($Bairro_Professor){
+        $this -> Bairro_Professor = $Bairro_Professor;
+    }
+
+    public function getCidade_Professor(){
+        return($this -> Cidade_Professor);
+    }
+
+    public function setCidade_Aluno($Cidade_Professor){
+        $this -> Cidade_Professor = $Cidade_Professor;
+    }
+
+    public function getUF_Professor(){
+        return($this -> UF_Professor);
+    }
+
+    public function setUF_Professor($UF_Professor){
+        $this -> UF_Professor = $UF_Professor;
+    }
+
     public function getEndereco_Numero_Professor(){
         return($this -> Endereco_Numero_Professor);
     }
@@ -92,7 +128,7 @@ class CadastroProfessor{
         include_once "../Conexao.php";
 
         try{
-            $comando = $conexao -> prepare(("insert into TB_Aluno (Nome_Prof, Data_Nasc_Prof, CPF_Prof, Email_Prof, Senha_Prof, Celular_Prof, CEP_Prof, Endereco_Num_Prof, Endereco_Complemento_Prof, Data_Cadastro) values(?,?,?,?,?,?,?,?,?,?,NOW())"));
+            $comando = $conexao -> prepare(("insert into TB_Aluno (Nome_Professor, Data_Nascimento_Professor, CPF_Professor, Email_Professor, Senha_Professor, Celular_Professor, CEP_Professor, Endereco_Professor, Bairro_Professor, Cidade_Professor, UF_Professor,Endereco_Numero_Professor, Endereco_Complemento_Professor, Data_Cadastro) values(?,?,?,?,?,?,?,?,?,?,?,?,?,NOW())"));
             $comando -> bindParam(1, $this -> Nome_Professor);
             $comando -> bindParam(2, $this -> Data_Nascimento_Professor);
             $comando -> bindParam(3, $this -> CPF_Professor);
@@ -100,8 +136,12 @@ class CadastroProfessor{
             $comando -> bindParam(5, $this -> Senha_Professor);
             $comando -> bindParam(6, $this -> Celular_Professor);
             $comando -> bindParam(7, $this -> CEP_Professor);
-            $comando -> bindParam(8, $this -> Endereco_Numero_Professor);
-            $comando -> bindParam(9, $this -> Endereco_Complemento_Professor);
+            $comando -> bindParam(8, $this -> Endereco_Professor);
+            $comando -> bindParam(9, $this -> Bairro_Professor);
+            $comando -> bindParam(10, $this -> Cidade_Professor);
+            $comando -> bindParam(11, $this -> UF_Professor);
+            $comando -> bindParam(12, $this -> Endereco_Numero_Professor);
+            $comando -> bindParam(13, $this -> Endereco_Complemento_Professor);
 
             
             if($comando -> execute()){

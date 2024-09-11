@@ -2,69 +2,61 @@
 
 class Login{
     //Variáveis Login
-    private $email;
-    private $senha;
-    private $ocupacao;
+    private $Email_Aluno;
+    private $Senha_Aluno;
+
+    private $Email_Professor;
+    private $Senha_Professor;
+
 
     //Get/ Set
 
-    public function getemail(){
-        return($this -> email);
+    public function getEmail_Aluno(){
+        return($this -> Email_Aluno);
     }
 
-    public function setemail($email){
-        $this -> email = $email;
+    public function setEmail_Aluno($Email_Aluno){
+        $this -> Email_Aluno = $Email_Aluno;
     }
 
-    public function getsenha(){
-        return($this -> senha);
+    public function getSenha_Aluno(){
+        return($this -> Senha_Aluno);
     }
 
-    public function setsenha($senha){
-        $this -> senha = $senha;
+    public function setSenha_Aluno($Senha_Aluno){
+        $this -> Senha_Aluno = $Senha_Aluno;
     }
 
-    public function getocupacao(){
-        return($this -> ocupacao);
+    public function getEmail_Professor(){
+        return($this -> Email_Professor);
     }
 
-    public function setocupacao($ocupacao){
-        $this -> ocupacao = $ocupacao;
+    public function setEmail_Professor($Email_Professor){
+        $this -> Email_Professor = $Email_Professor;
     }
 
+    public function getSenha_Professor(){
+        return($this -> Senha_Professor);
+    }
 
-    //Método - Login
+    public function setSenha_Professor($Senha_Professor){
+        $this -> Senha_Professor = $Senha_Professor;
+    }
+  
 
-    public function Logar(){
-        include_once "../Conexao.php";
 
-    if($this -> ocupacao == 'aluno'){
+    //Métodos - Login 
+
+    public function LoginAluno(){
+        include_once "Conexao.php";
+
         try{
-        $comando = $conexao -> prepare("SELECT Email_Aluno, Senha_Aluno FROM TB_Aluno WHERE Email_Aluno = ?, Senha_Aluno = ?");
-        $comando -> bindParam(1, $this -> email);
-        $comando -> bindParam(2, $this -> senha);
-       
-            if($comando -> execute()){
-                $retorno =  $comando -> fetchALL(PDO::FETCH_ASSOC);
-            }
-            
-    }
-
-    catch(PDOException $Erro){
-        $retorno = "Não encontrado" . $Erro -> getMessage();
-    }
-
-    return $retorno;
-    }
-
-    else if($this -> ocupacao == "professor"){
-        try{
-            $comando = $conexao -> prepare("SELECT Email_Prof, Senha_Prof FROM TB_Professor WHERE Email_Professor = ?, Senha_Professor = ?");
-            $comando -> bindParam(1, $this -> email);
-            $comando -> bindParam(2, $this -> senha);
+            $comando = $conexao -> prepare("SELECT Email_Aluno, Senha_Aluno FROM TB_Aluno WHERE Email_Aluno = ? AND Senha_Aluno = ?");
+            $comando -> bindParam(1, $this -> Email_Aluno);
+            $comando -> bindParam(2, $this -> Senha_Aluno);
            
                 if($comando -> execute()){
-                    $retorno =  $comando -> fetchALL(PDO::FETCH_ASSOC);
+                    $retorno =  'Sucesso';
                 }
                 
         }
@@ -75,8 +67,30 @@ class Login{
     
         return $retorno;
     }
-}   
 
+    public function LoginProfessor(){
+        include_once "Conexao.php";
+
+        try{
+            $comando = $conexao -> prepare("SELECT Email_Professor, Senha_Professor FROM TB_Professor WHERE Email_Professor = ? AND Senha_Professor = ?");
+            $comando -> bindParam(1, $this -> Email_Professor);
+            $comando -> bindParam(2, $this -> Senha_Professor);
+           
+                if($comando -> execute()){
+                    $retorno =  'Sucesso';
+                }
+                
+        }
+    
+        catch(PDOException $Erro){
+            $retorno = "Não encontrado" . $Erro -> getMessage();
+        }
+    
+        return $retorno;
+    }
+
+
+    //Método Recuperação de Senha
     public function recuperacao(){
         include_once "../Conexao.php";
 
@@ -86,6 +100,11 @@ class Login{
             $comando -> bindParam(2, $this -> senha);
         }
     }
+    }
 
-}
+
+    
+
+
+
 

@@ -1,4 +1,4 @@
-function Login(){
+function LoginAluno(){
 
 
     var email = document.getElementById("email").value;
@@ -45,6 +45,45 @@ function LoginAluno(){
 
    $.ajax({
     method: 'GET';
-    url: 'ContrLogin.php?'
+    url: 'ContrLogin.php?Logar',
+    data: LogAluno,
+   })
+
+   .done(function(dadosPHP){
+        if(dadosPHP == 'Sucesso'){
+            window.location.replace("http://localhost/TCC---WorkingBrain-main/Aluno/HomeAluno.html");
+        }
+
+        else{
+            alert("Email ou Senha incorreto! Tente novamente");
+        }
+   })
+
+   .fail(function(){
+        alert("Ocorreu um problema!");
+   })
+}
+
+function LoginProfessor(){
+    var LogProfessor = $("#FormProfessor").serialize();
+
+   $.ajax({
+    method: 'GET';
+    url: 'ContrLogin.php?LoginProfessor',
+    data: LogProfessor,
+   })
+
+   .done(function(dadosPHP){
+        if(dadosPHP == 'Sucesso'){
+            window.location.replace("http://localhost/TCC---WorkingBrain-main/Aluno/HomeProfessor.html");
+        }
+
+        else{
+            alert("Email ou Senha incorreto! Tente novamente");
+        }
+   })
+
+   .fail(function(){
+        alert("Ocorreu um problema!");
    })
 }
