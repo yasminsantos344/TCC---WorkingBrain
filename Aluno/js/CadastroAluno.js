@@ -26,6 +26,10 @@ function FCadastroAluno (){
             .done(function(dadosPHP){
                 $("#resultado").html(dadosPHP);
                 resposta.classList.add("ativo");
+
+                setTimeout(function(){
+                    window.location.replace("http://localhost/Cronogramas/Opcoes.html");
+                }, 5000);
             })
         
             .fail(function(){

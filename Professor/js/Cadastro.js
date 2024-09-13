@@ -2,17 +2,37 @@
 // Professor
 
 function SolicitaProfessor(){
-    var senha       = document.getElementById("Senha_Professor").value;
-    var confirmacao = document.getElementById("Senha_Professor_Confirmacao").value;
+
 
     if(verificacaoCPF() == 'válido'){
         var resultado = document.querySelector('.resultado');
 
-            if(senha == confirmacao){
-
                 try{
 
-                    var Nome_Professor             = document.querySelector("#Nome_Professor").value;
+                    var DadosProfessor = JSON.stringify({
+                        Nome                 : document.querySelector("#Nome_Professor").value,
+                        Data_Nascimento_Professor      : document.querySelector("#Data_Nascimento_Professor").value,
+                        CPF_Professor                  : document.querySelector("#Celular_Professor").value,
+                        Celular_Professor              : document.querySelector("#Celular_Professor").value,
+                        Email_Professor                : document.querySelector("#Email_Professor").value,
+                        CEP_Professor                  : document.querySelector("#CEP_Professor").value,
+                        Endereco_Professor             : document.querySelector("#Endereco_Professor").value,
+                        Bairro_Professor               : document.querySelector("#Bairro_Professor").value,
+                        Cidade_Professor               : document.querySelector("#Cidade_Professor").value,
+                        UF_Professor                   : document.querySelector("#UF_Professor").value,
+                        Endereco_Numero_Professor      : document.querySelector("#Endereco_Numero_Professor").value,
+                        Endereco_Complemento_Professor : document.querySelector("#Endereco_Complemento_Professor").value
+
+
+                    })
+
+                    localStorage.setItem("storage", JSON.stringify(dados));
+
+                    resultado.classList.add("ativo");
+                    resultado.innerHTML = 'Solicitação realizada com sucesso!';
+                    
+
+                    /*var Nome_Professor             = document.querySelector("#Nome_Professor").value;
                     var Data_Nascimento_Professor  = document.querySelector("#Data_Nascimento_Professor").value;
                     var CPF_Professor              = document.querySelector("#CPF_Professor").value;
                     var Celular_Professor          = document.querySelector("#Celular_Professor").value;
@@ -31,10 +51,9 @@ function SolicitaProfessor(){
         
                     
         
-                    resultado.classList.add("ativo");
-                    resultado.innerHTML = 'Solicitação realizada com sucesso!';
+                    
         
-                    var dadosProfessor =  localStorage.getItem('valueText', DivSolicitacao);
+                    var dadosProfessor =  localStorage.getItem('valueText', DivSolicitacao);*/
                     
                 }
         
@@ -46,12 +65,6 @@ function SolicitaProfessor(){
         
                 console.log(dadosProfessor);
                 return(dadosProfessor);
-            }
-
-            else{
-                alert("Senha incorreta!");
-                
-            }
     }
 
     else{

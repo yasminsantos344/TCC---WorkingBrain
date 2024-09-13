@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte sua rotina!</title>
+</head>
+<body>
+
+    <form action="" method="get" id="FormCronograma">
+        <h1>Monte seu cronograma</h1>
+
+        <h2>Selecione o Objetivo do seu cronograma</h2>
+
+        <label for="">Homeschooling</label>
+        <input type="radio" name="Objetivo" id="homeschooling" value="homeschooling"><br>
+
+        <label for="Reforço">Reforço</label>
+        <input type="radio" name="Objetivo" id="reforco" value="reforco"><br>
+
+        <label for="vestibular">Vestibular</label>
+        <input type="radio" name="Objetivo" id="vestibular" value="vestibular"><br>
+
+        <h2>Selecione os dias da semana que deseja:</h2>
+
+        <label for="s">Dom</label>
+        <input type="checkbox" name="Dom" id="dom" value="1">
+
+        <label for="s">Seg</label>
+        <input type="checkbox" name="Seg" id="seg" value="2"><br>
+        
+        <label for="s">Ter</label>
+        <input type="checkbox" name="Ter" id="ter" value="3"><br>
+
+        <label for="s">Qua</label>
+        <input type="checkbox" name="Qua" id="qua" value="4"><br>
+
+        <label for="s">Qui</label>
+        <input type="checkbox" name="Qui" id="qui" value="5"><br>
+
+        <label for="s">Sex</label>
+        <input type="checkbox" name="Sex" id="sex" value="6"><br>
+
+        <label for="s">Sab</label>
+        <input type="checkbox" name="Sab" id="sab" value="7"><br>
+
+        <h2>Escolha o nível que voçê se encontra:</h2>
+        
+        <label for="fundi">Fundamental I</label>
+        <input type="radio" name="Nivel" id="nivelfundi" value="fundI"><br>
+
+        <label for="fundii">Fundamental II</label>
+        <input type="radio" name="Nivel" id="nivelfundii" value="fundII"><br>
+
+        <label for="medio">Ensino Médio</label>
+        <input type="radio" name="Nivel" id="nivelmedio" value="medio"><br>
+
+        <input type="button" value="Finalizar" name="finalizar" id="finalizar" onclick="CronogramaAluno()" >
+    </form>
+       
+    <script src="../Cronogramas/js/opcoes.js"></script>
+</body>
+</html>

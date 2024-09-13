@@ -44,7 +44,7 @@ function LoginAluno(){
    var LogAluno = $("#FormAluno").serialize();
 
    $.ajax({
-    method: 'GET';
+    method: 'GET',
     url: 'ContrLogin.php?Logar',
     data: LogAluno,
    })
@@ -68,7 +68,7 @@ function LoginProfessor(){
     var LogProfessor = $("#FormProfessor").serialize();
 
    $.ajax({
-    method: 'GET';
+    method: 'GET',      
     url: 'ContrLogin.php?LoginProfessor',
     data: LogProfessor,
    })
