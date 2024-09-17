@@ -1,70 +1,36 @@
 
 // Professor
 
-function SolicitaProfessor(){
-
+function FSolicitaProfessor(){
+    
 
     if(verificacaoCPF() == 'válido'){
-        var resultado = document.querySelector('.resultado');
+        var resposta = document.querySelector('.resultado');
+        var DadosProfessor = $('#CadastroProf').serialize();
 
-                try{
+        $.ajax({
+            method: 'GET',
+            url: 'ContrProfessor.php?Solicitar',
+            data: DadosProfessor,
+    
+            beforeSend: function(){
+                resposta.classList.add("ativo");
+                $("#resultado").html("Enviando solicitação");
+            }
+        })
+    
+        .done(function(dadosPHP){
+            
+            resposta.classList.add("ativo");
+            $("#resultado").html(dadosPHP);
 
-                    var DadosProfessor = JSON.stringify({
-                        Nome                 : document.querySelector("#Nome_Professor").value,
-                        Data_Nascimento_Professor      : document.querySelector("#Data_Nascimento_Professor").value,
-                        CPF_Professor                  : document.querySelector("#Celular_Professor").value,
-                        Celular_Professor              : document.querySelector("#Celular_Professor").value,
-                        Email_Professor                : document.querySelector("#Email_Professor").value,
-                        CEP_Professor                  : document.querySelector("#CEP_Professor").value,
-                        Endereco_Professor             : document.querySelector("#Endereco_Professor").value,
-                        Bairro_Professor               : document.querySelector("#Bairro_Professor").value,
-                        Cidade_Professor               : document.querySelector("#Cidade_Professor").value,
-                        UF_Professor                   : document.querySelector("#UF_Professor").value,
-                        Endereco_Numero_Professor      : document.querySelector("#Endereco_Numero_Professor").value,
-                        Endereco_Complemento_Professor : document.querySelector("#Endereco_Complemento_Professor").value
+        })
+    
+        .fail(function(){
+            resposta.classList.add("ativo");
+            $("#resultado").html("Falha na Solicitação");
+        })
 
-
-                    })
-
-                    localStorage.setItem("storage", JSON.stringify(dados));
-
-                    resultado.classList.add("ativo");
-                    resultado.innerHTML = 'Solicitação realizada com sucesso!';
-                    
-
-                    /*var Nome_Professor             = document.querySelector("#Nome_Professor").value;
-                    var Data_Nascimento_Professor  = document.querySelector("#Data_Nascimento_Professor").value;
-                    var CPF_Professor              = document.querySelector("#CPF_Professor").value;
-                    var Celular_Professor          = document.querySelector("#Celular_Professor").value;
-                    var Email_Professor            = document.querySelector("#Email_Professor").value;
-        
-                    
-        
-                    var DivSolicitacao = `<div class="DivSolicitao">
-                        <h4>${Nome_Professor}</h4><br>
-                        <p>${Data_Nascimento_Professor}</p><br>
-                        <p>${Data_Nascimento_Professor}</p><br>
-                        <p>${CPF_Professor}</p><br>
-                        <p>${Celular_Professor}</p><br>
-                        <p>${Email_Professor}</p><br>
-                    </div>`;
-        
-                    
-        
-                    
-        
-                    var dadosProfessor =  localStorage.getItem('valueText', DivSolicitacao);*/
-                    
-                }
-        
-                catch(error){
-                    resultado.classList.add("ativo");
-                    resultado.innerHTML = 'Ocorreu algum problema!'
-                    resultado.innerHTML = '<br>' + error;
-                }  
-        
-                console.log(dadosProfessor);
-                return(dadosProfessor);
     }
 
     else{
@@ -72,13 +38,58 @@ function SolicitaProfessor(){
     }
 }
 
+function Exibir(){
+    var DadosProfessor = $('#CadastroProf').serialize();
+
+    $.ajax({
+    url: '../Professor/ContrProfessor.php?Exibir',
+
+        beforeSend: function(){
+            $("#box-solicitacoes").html("Buscando solicitações...");
+        }
+    })
+
+    .done(function(dadosPHP){
+        let DadosProf = JSON.parse(dadosPHP);
+
+        var bloco = '';
+        for(i = 0; i < DadosProf.length; i++ ){
+            bloco += '<div class="DivSolicitacao">';
+            bloco += "<b>Nome:</b> " + DadosProf[i].Nome_Professor + "<br>";
+            bloco += "<b>Data de Nascimento:</b> " + DadosProf[i].Data_Nascimento_Professor + "<br>";
+            bloco += "<b>CPF:</b> " + DadosProf[i].CPF_Professor + "<br>";
+            bloco += "<b>Email:</b> " + DadosProf[i].Email_Professor + "<br>";
+            bloco += "<b>Celular:</b> " + DadosProf[i].Celular_Professor + "<br>";
+            bloco += "<b>CEP:</b> " + DadosProf[i].CEP_Professor + "<br>";
+            bloco += "<b>Endereco:</b> " + DadosProf[i].Endereco_Professor + "<br>";
+            bloco += "<b>Bairro:</b> " + DadosProf[i].Bairro_Professor + "<br>";
+            bloco += "<b>Cidade:</b> " + DadosProf[i].Bairro_Professor + "<br>";
+            bloco += "<b>UF:</b> " + DadosProf[i].UF_Professor + "<br>";
+            bloco += "<b>Numero: </b>" + DadosProf[i].Endereco_Numero_Professor + "<br>";
+            bloco += "<b>Complemento:</b> " + DadosProf[i].Endereco_Complemento_Professor + "<br>";
+            bloco += '<input type="button" class="botao-div" name="Cadastrar" id="Cadastrar" value="Aceitar" onclick="CadastrarProfessor()">';
+            bloco += '<input type="button" class="botao-div" name="NegarCadastro" id="Negar" value="Negar" onclick="NegarCadastro()">';
+            bloco += "</div>";
+            
+        }
+
+
+        $("#box-solicitacoes").html(bloco);
+        console.log(bloco);
+
+    })
+
+    .fail(function(){
+        $("#box-solicitacoes").html("Falha na Exibição");
+    })
+}
 
 
 function CadastroProfessor(){
 
 
 
-    var DadosAluno = $('#Cadastro').serialize();
+    var DadosProfessor = $('#Cadastro').serialize();
 
 $.ajax({
             method: 'GET',
@@ -148,10 +159,10 @@ CEP_Professor.addEventListener('focusout', async () => {
 function verificacaoCPF(){
     //484.943.238-73 (11 dígitos)
 
-    var CPF_Professor = document.querySelector('#CPF_Professor').value;   
+    let CPF_Professor = document.querySelector('#CPF_Professor').value;   
     let myFunc = num => Number(num);
   
-    var CpfArray = Array.from(String(CPF_Aluno), myFunc);
+    let CpfArray = Array.from(String(CPF_Professor), myFunc);
 
     v1_1 = CpfArray[0] * 10;// Parte 1
     v1_2 = CpfArray[1] * 9;
@@ -165,8 +176,8 @@ function verificacaoCPF(){
 
     console.log(CpfArray);
 
-   var soma1  = v1_1+v1_2+v1_3+v1_4+v1_5+v1_6+v1_7+v1_8+v1_9;
-   var resto1 = soma1 % 11;
+   let soma1  = v1_1+v1_2+v1_3+v1_4+v1_5+v1_6+v1_7+v1_8+v1_9;
+   let resto1 = soma1 % 11;
    var digito_verificador1 = 11 - resto1;
 
    if(digito_verificador1 >= 10){
@@ -188,8 +199,8 @@ function verificacaoCPF(){
     v2_9 = CpfArray[8] * 3;
     v2_10 = CpfArray[9] * 2;
 
-    var soma2  = v2_1+v2_2+v2_3+v2_4+v2_5+v2_6+v2_7+v2_8+v2_9+v2_10;
-    var resto2 = soma2 % 11;
+    let soma2  = v2_1+v2_2+v2_3+v2_4+v2_5+v2_6+v2_7+v2_8+v2_9+v2_10;
+    let resto2 = soma2 % 11;
     var digito_verificador2 = 11 - resto2;
 
     if(digito_verificador2 >= 10){

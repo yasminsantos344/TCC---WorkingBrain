@@ -86,7 +86,7 @@ class CadastroProfessor{
         return($this -> Bairro_Professor);
     }
 
-    public function setBairro_Aluno($Bairro_Professor){
+    public function setBairro_Professor($Bairro_Professor){
         $this -> Bairro_Professor = $Bairro_Professor;
     }
 
@@ -94,7 +94,7 @@ class CadastroProfessor{
         return($this -> Cidade_Professor);
     }
 
-    public function setCidade_Aluno($Cidade_Professor){
+    public function setCidade_Professor($Cidade_Professor){
         $this -> Cidade_Professor = $Cidade_Professor;
     }
 
@@ -122,13 +122,14 @@ class CadastroProfessor{
         $this -> Endereco_Complemento_Professor = $Endereco_Complemento_Professor;
     }
 
-    //Método - Cadastrar
+    //Método - Solicitar
 
-    public function Cadastrar(){
+    public function Solicitar(){
         include_once "../Conexao.php";
 
         try{
-            $comando = $conexao -> prepare(("insert into TB_Aluno (Nome_Professor, Data_Nascimento_Professor, CPF_Professor, Email_Professor, Senha_Professor, Celular_Professor, CEP_Professor, Endereco_Professor, Bairro_Professor, Cidade_Professor, UF_Professor,Endereco_Numero_Professor, Endereco_Complemento_Professor, Data_Cadastro) values(?,?,?,?,?,?,?,?,?,?,?,?,?,NOW())"));
+            $comando = $conexao -> prepare("INSERT INTO TB_Solicitar (Nome_Professor, Data_Nascimento_Professor, CPF_Professor, Email_Professor, Senha_Professor, Celular_Professor, CEP_Professor, Endereco_Professor, Bairro_Professor, Cidade_Professor, UF_Professor,Endereco_Numero_Professor, Endereco_Complemento_Professor, Data_Solicitacao) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,NOW());
+                                             SELECT Nome_Professor, Data_Nascimento_Professor,CPF_Professor, Email_Professor, Celular_Professor, CEP_Professor, Endereco_Professor, Bairro_Professor, Cidade_Professor, UF_Professor, Endereco_Numero_Professor, Endereco_Complemento_Professor WHERE CPF_Professor = ?  ");
             $comando -> bindParam(1, $this -> Nome_Professor);
             $comando -> bindParam(2, $this -> Data_Nascimento_Professor);
             $comando -> bindParam(3, $this -> CPF_Professor);
@@ -142,20 +143,43 @@ class CadastroProfessor{
             $comando -> bindParam(11, $this -> UF_Professor);
             $comando -> bindParam(12, $this -> Endereco_Numero_Professor);
             $comando -> bindParam(13, $this -> Endereco_Complemento_Professor);
+            $comando -> bindParam(14, $this -> CPF_Professor);
 
             
-            if($comando -> execute()){
-                $retorno = "Cadastro realizado com sucesso";
+            if($comando -> execute()){         
+                $retorno = "Solicitação realizada com sucesso!";
             }
     
         }
     
         catch(PDOException $Erro){
-            $retorno = "Erro no cadastro" . $Erro -> getMessage();
+            $retorno = "Erro na solicitação!" . $Erro -> getMessage();
         }
     
-        return($retorno);
-        
+        return $retorno;
+    
     }
 
+    //Método - Exibir Solicitação
+
+    public function Exibir(){
+        include_once "../Conexao.php";
+
+        try{
+            $comando = $conexao -> prepare("SELECT Nome_Professor, Data_Nascimento_Professor,CPF_Professor, Email_Professor, Celular_Professor, CEP_Professor, Endereco_Professor, Bairro_Professor, Cidade_Professor, UF_Professor, Endereco_Numero_Professor, Endereco_Complemento_Professor FROM TB_Solicitar");
+                       
+            $comando -> execute();
+            $Matriz =  $comando -> fetchALL();            
+            $retorno = json_encode($Matriz);
+
+    
+        }
+    
+        catch(PDOException $Erro){
+            $retorno = "Erro" . $Erro -> getMessage();
+        }
+    
+        return $retorno;
+
+    }
 }
