@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Login/css/login.css">
     <title>login</title>
@@ -24,6 +25,8 @@
                             <label for="senha">Senha:</label><br>
                             <input type="password" name="senha" id="senha" placeholder="Digite sua senha"><br>
                         </div>
+
+                        <a href="">Esqueceu sua senha?</a><br>
                         
                         <input class="btn" id="LogAluno" name="LoginAluno" type="button" value="Entrar" onclick="LoginAluno()"><br>
 
@@ -49,8 +52,10 @@
                             <label for="senha">Senha:</label><br>
                             <input type="password" name="senha" id="senha" placeholder="Digite sua senha" style="border-color: #F9A5A5;"><br>
                         </div>
+
+                        <a href="">Esqueceu sua senha?</a><br>
                         
-                        <input class="btn" id="LogProfessor" name="LoginProfessor" type="button" value="Entrar" onclick="LoginProfessor()"><br>
+                        <input class="btn" id="LogProfessor" name="LoginProfessor" type="button" value="Entrar" onclick="FLoginProfessor()"><br>
     
                         <div class="resultadoProfessor"></div>
 

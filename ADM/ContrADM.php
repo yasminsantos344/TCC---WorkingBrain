@@ -7,8 +7,16 @@ $ADM = new Administrador;
 
 $CPF_Professor = filter_input(INPUT_GET, "CPF_Professor");
 
+
+
 $ADM -> setCPF_Professor($CPF_Professor);
 
 if(isset($_GET["Cadastrar"])){
+
     echo $ADM -> CadastroProfessor();
+}
+
+else if(isset($_GET["RejeitarCadastro"])){
+
+    echo $ADM -> RejeitarCadastro();
 }

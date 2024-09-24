@@ -160,6 +160,9 @@ class CadastroProfessor{
     
     }
 
+
+    
+
     //Método - Exibir Solicitação
 
     public function Exibir(){
@@ -180,6 +183,20 @@ class CadastroProfessor{
         }
     
         return $retorno;
+
+    }
+
+    // Método excluir conta
+
+    public function ExcluirConta(){
+        include "../Conexao.php";
+
+        try{
+            
+        }
+        catch(){
+
+        }
 
     }
 }

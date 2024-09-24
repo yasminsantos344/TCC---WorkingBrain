@@ -64,7 +64,7 @@ function LoginAluno(){
    })
 }
 
-function LoginProfessor(){
+function FLoginProfessor(){
     var LogProfessor = $("#FormProfessor").serialize();
 
    $.ajax({
@@ -74,13 +74,14 @@ function LoginProfessor(){
    })
 
    .done(function(dadosPHP){
-        if(dadosPHP == 'Sucesso'){
+    alert(dadosPHP);
+        /*if(dadosPHP == 'Sucesso'){
             window.location.replace("http://localhost/TCC---WorkingBrain-main/Aluno/HomeProfessor.html");
         }
 
         else{
             alert("Email ou Senha incorreto! Tente novamente");
-        }
+        }*/
    })
 
    .fail(function(){

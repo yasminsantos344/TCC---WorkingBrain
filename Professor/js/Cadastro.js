@@ -39,7 +39,6 @@ function FSolicitaProfessor(){
 }
 
 function Exibir(){
-    var DadosProfessor = $('#CadastroProf').serialize();
 
     $.ajax({
     url: '../Professor/ContrProfessor.php?Exibir',
@@ -68,7 +67,7 @@ function Exibir(){
             bloco += "<b>Numero: </b>" + DadosProf[i].Endereco_Numero_Professor + "<br>";
             bloco += "<b>Complemento:</b> " + DadosProf[i].Endereco_Complemento_Professor + "<br>";
             bloco += '<input type="button" class="botao-div" name="Cadastrar" id="Cadastrar" value="Aceitar" onclick="CadastrarProfessor()">';
-            bloco += '<input type="button" class="botao-div" name="NegarCadastro" id="Negar" value="Negar" onclick="NegarCadastro()">';
+            bloco += '<input type="button" class="botao-div" name="NegarCadastro" id="Negar" value="Negar" onclick="RejeitarCadastro()">';
             bloco += "</div>";
             
         }

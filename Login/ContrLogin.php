@@ -4,10 +4,10 @@ include_once "CLSLogin.php";
 
 $Log = new Login;
 
-$Email_Aluno        = filter_input("GET", "Email_Aluno", FILTER_VALIDATE_EMAIL);
-$Senha_Aluno        = filter_input("GET", "Senha_Aluno",);
-$Email_Professor    = filter_input("GET", "Email_Professor", FILTER_VALIDATE_EMAIL);
-$Senha_Professor    = filter_input("GET", "Senha_Professor",);
+$Email_Aluno        = filter_input(INPUT_GET, "Email_Aluno"); //FILTER_VALIDATE_EMAIL);
+$Senha_Aluno        = filter_input(INPUT_GET, "Senha_Aluno");
+$Email_Professor    = filter_input(INPUT_GET, "Email_Professor");//, FILTER_VALIDATE_EMAIL);
+$Senha_Professor    = filter_input(INPUT_GET, "Senha_Professor");
 
 
 $Log -> setEmail_Aluno($Email_Aluno);
@@ -20,5 +20,34 @@ if(ISSET($_GET["LoginAluno"])){
 }
 
 else if(ISSET($_GET["LoginProfessor"])){
-    echo $Log -> LoginProfessor();
+
+    $Dados = $Log -> LoginProfessor();
+    
+
+    if(empty($Dados)){
+        echo "Usuário não encontrado.";
+
+    }
+
+    else{
+        foreach($Dados as $Dd){
+            //array
+            if($Dd['Email_Professor'] == $Email_Professor && $Dd['Senha_Professor'] == $Senha_Professor){
+                echo "<script> window.location.replace(http://localhost/TCC---WorkingBrain-main/Professor/HomeProfessor.html)</script>";
+            }
+            
+            else{
+                echo "Email ou Senha incorretos!";
+            }
+            
+        }
+    }
+}
+
+else if(ISSET($_GET["RecuperarA"])){
+    echo $Log -> recuperacaoAluno();
+}
+
+else if(ISSET($_GET["RecuperarP"])){
+    echo $Log -> recuperacaoProfessor();
 }

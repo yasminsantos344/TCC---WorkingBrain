@@ -48,7 +48,7 @@ class Login{
     //Métodos - Login 
 
     public function LoginAluno(){
-        include_once "Conexao.php";
+        include_once "../Conexao.php";
 
         try{
             $comando = $conexao -> prepare("SELECT Email_Aluno, Senha_Aluno FROM TB_Aluno WHERE Email_Aluno = ? AND Senha_Aluno = ?");
@@ -69,7 +69,7 @@ class Login{
     }
 
     public function LoginProfessor(){
-        include_once "Conexao.php";
+        include_once "../Conexao.php";
 
         try{
             $comando = $conexao -> prepare("SELECT Email_Professor, Senha_Professor FROM TB_Professor WHERE Email_Professor = ? AND Senha_Professor = ?");
@@ -77,7 +77,7 @@ class Login{
             $comando -> bindParam(2, $this -> Senha_Professor);
            
                 if($comando -> execute()){
-                    $retorno =  'Sucesso';
+                    $retorno =  $comando -> fetchALL(PDO::FETCH_ASSOC);
                 }
                 
         }
@@ -91,13 +91,31 @@ class Login{
 
 
     //Método Recuperação de Senha
-    public function recuperacao(){
+    public function recuperacaoAluno(){
         include_once "../Conexao.php";
 
         try{
-            $comando = $conexao -> prepare("UPDATE ");
-            $comando -> bindParam(1, $this -> email);
-            $comando -> bindParam(2, $this -> senha);
+            $comando = $conexao -> prepare("UPDATE TB_Aluno SET Senha_Aluno = ? WHERE Email_Aluno = ?");
+            $comando -> bindParam(1, $this -> Email_Aluno);
+            $comando -> bindParam(2, $this -> Senha_Aluno);
+        }
+
+        catch(PDOException $Erro){
+            $retorno = "Ops!" . $Erro -> getMessage();  
+        }
+    }
+
+    public function recuperacaoProfessor(){
+        include_once "../Conexao.php";
+
+        try{
+            $comando = $conexao -> prepare("UPDATE TB_Professor SET Senha_Professor = ? WHERE Email_Professo = ?");
+            $comando -> bindParam(1, $this -> Email_Professor);
+            $comando -> bindParam(2, $this -> Senha_Professor);
+        }
+
+        catch(PDOException $Erro){
+            $retorno = "Ops!" . $Erro -> getMessage();  
         }
     }
     }

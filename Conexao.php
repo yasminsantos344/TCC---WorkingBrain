@@ -2,7 +2,7 @@
 
 $Bco = 'DB_WorkingBrain';
 $Usuario = 'root';
-$Senha = '';
+$Senha = '34394383@Yg';
 
 /*34394383@Yg*/
 
