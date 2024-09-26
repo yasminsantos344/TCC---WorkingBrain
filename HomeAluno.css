@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+}
+
+.nav-bar {
+    background: #F2F2F2;
+    align-items: center;  
+    width:100%;
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+}
+
+.aside {
+    width: 3%;
+    height: 100vh;
+    background-color: #252525;
+    transition: 1000ms ease-in-out;
+}
+
+.aside:hover {
+    width: 15%;
+}
+
+#logo {
+    width: 6rem;
+}
+
+#srch{
+    width: 28rem;
+    height: 2.5rem;
+    border: none;
+    background:#CAE8F3;
+    border-radius: 30px;
+    color:#0e97c9;
+    font-size: 16px;
+    padding: 0 15px;
+    outline: none;
+}
+ 
+#btn1 {
+    border: none;
+    border-radius: 30rem;
+    background: none;
+    color: #ffffff;
+    top: 0.08rem;
+    left: 25.5rem;
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    outline: none;
+    transform: scale(0.9);
+}
+
+#bemvindo {
+    color:#6893EF;
+}
+
+#perfil {
+    width: 4rem;    
+}
+
+#dropdown {
+    background: none;
+    color:#6893EF;
+    border: 0 none;
+    outline: 0;
+    outline-style: none;
+    width: 45px;
+    height: 45px;
+    box-shadow: none;
+}
+
+.secao1 {
+    background: #CAE8F3;
+    width: 100%;
+    height: 100vh;
+    padding-left: 3rem;
+    position: relative;
+}
+
+.carousel-item {
+    background: #F9A5A5;
+    border-radius: 20px;
+    color: #B95F5F;
+    border: 5px solid #F0CDCD;
+}
+
+@media (max-width: 918px){
+    .carousel-item {
+        width: 60%;
+        height: 50%;
+
+    }
+}
+
+.carousel-indicators {
+    position: relative;
+    top: 110%;
+    padding-right: 48%;
+
+}
+
+.carousel-indicators li {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    background-color: #BBBBBB !important;
+}
+
+.carousel-indicators .active {
+    background: #E27B7B !important;
+}
+
+#atualizacoes {
+    color: #252525;
+}
+
+#stars {
+    width: 12rem;
+    height: 22rem;
+    margin-top: -19rem !important;
+    margin-left: 72%;
+}
+
+#boneco {
+    width: 26rem;
+    height: 24rem;
+    margin-top: 0.5rem !important;
+    margin-left: 60%;
+    z-index: 1;
+}
+
+.secao2 {
+    position: relative;
+    padding-left: 3rem;
+    color: #252525;
+    background: #F2F2F2;
+    z-index: 0;
+}
+
+#conteudo {
+    font-size: x-large;
+}
+
+#carousel2{
+    border: none;
+    color: #252525;
+    background: none;
+}
+
+#cards1 {
+    width: 100%;
+    height: 30rem;
+    display: block;
+    text-align: center;
+    padding: 40% 5%;
+    background: #FCFCFC;
+    border-radius: 4rem;
+}
