@@ -129,7 +129,7 @@ class CadastroAluno{
 
 
         try{
-            $comando = $conexao -> prepare(("insert into TB_Aluno (Hora_Matricula_Aluno, Nome_Aluno, Data_Nascimento_Aluno, CPF_Aluno, Email_Aluno, Senha_Aluno, Celular_Aluno, CEP_Aluno, Endereco_Aluno, Bairro_Aluno, Cidade_Aluno, UF_Aluno,Endereco_Numero_Aluno, Endereco_Complemento_Aluno) values(NOW(),?,?,?,?,md5(?),?,?,?,?,?,?,?,?)"));
+            $comando = $conexao -> prepare("insert into TB_Aluno (Hora_Matricula_Aluno, Nome_Aluno, Data_Nascimento_Aluno, CPF_Aluno, Email_Aluno, Senha_Aluno, Celular_Aluno, CEP_Aluno, Endereco_Aluno, Bairro_Aluno, Cidade_Aluno, UF_Aluno,Endereco_Numero_Aluno, Endereco_Complemento_Aluno) values(NOW(),?,?,?,?,?,?,?,?,?,?,?,?,?)");
             $comando -> bindParam(1, $this -> Nome_Aluno);
             $comando -> bindParam(2, $this -> Data_Nascimento_Aluno);
             $comando -> bindParam(3, $this -> CPF_Aluno);

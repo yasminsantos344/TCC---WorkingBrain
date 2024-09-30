@@ -1,26 +1,3 @@
-function LoginAluno(){
-
-
-    var email = document.getElementById("email").value;
-    var senha = document.getElementById("senha").value;
-    var ocupacao;
-
-    if(document.getElementById("aluno").checked){
-        ocupacao = "aluno";
-    }
-    else if(document.getElementById("professor").checked){
-        ocupacao = "professor";
-    }
-
-    const xhttp = new XMLHttpRequest();
-
-    xhttp.onload = function(){
-        
-    }
-    xhttp.open("POST","Contr?email="+email+"&senha="+senha+"&ocupacao="+ocupacao+"&botao=login");
-    xhttp.send();
-}
-
 function Redirecionamento(){
     window.location.replace(/* Local de recuperar senha */)
 }
@@ -40,23 +17,24 @@ function Recuperacao(){
     }
 }
 
-function LoginAluno(){
+function FLoginAluno(){
    var LogAluno = $("#FormAluno").serialize();
 
    $.ajax({
     method: 'GET',
-    url: 'ContrLogin.php?Logar',
+    url: 'ContrLogin.php?LoginAluno',
     data: LogAluno,
    })
 
    .done(function(dadosPHP){
         if(dadosPHP == 'Sucesso'){
             window.location.replace("http://localhost/TCC---WorkingBrain-main/Aluno/HomeAluno.html");
+            
         }
-
         else{
-            alert("Email ou Senha incorreto! Tente novamente");
+            alert(dadosPHP);
         }
+        
    })
 
    .fail(function(){

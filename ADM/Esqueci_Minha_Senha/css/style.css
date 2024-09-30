@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+.body{
+    background: rgb(162,136,166);
+    background: linear-gradient(90deg, rgba(162,136,166,1) 35%, rgba(241,227,228,1) 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    background-color: #f2f2f2;
+    width: 95%;
+    border-radius: 40px;
+    align-items: center;
+    padding: 3%;
+    box-shadow: 5px 4px 14px 0px rgba(0,0,0,0.43);
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.process__name{
+    padding-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-weight: 800;
+}
+
+label {
+    font-family: "League Spartan", sans serif;
+    font-weight: 600;
+    font-size: larger;
+    color: gray;
+    padding: 0.5rem;
+}
+
+input{
+    font-family: "League Spartan", sans serif;
+    font-weight: 400;
+    font-size: larger;
+    color: gray;
+}
+
+.col{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-top: 21%;
+}
+
+.button__cad{
+    font-size: large;
+    font-weight: 600;
+    color: #f2f2f2;
+    background-color: rgb(162,136,166);
+    border-radius: 5px;
+    border: none;
+    padding: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.button__cad:hover{
+    cursor: pointer;
+    background-color: rgb(154, 102, 161);
+    color: #252525;
+}
+
+@media screen{
+    .body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 5%;
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 21%;
+    }
+}

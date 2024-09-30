@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+/*.body{
+    width: 100%;
+    min-height: 100%;
+    background: rgb(241,227,228);
+    background: linear-gradient(0deg, rgba(241,227,228,1) 0%, rgba(162,136,166,1) 100%);
+    font-family: "League Spartan", sans-serif;
+}
+
+.main{
+    width: 50%;
+    height: 80%;
+    background-color: rgba(28, 29, 33, 0.15);
+    border-radius: 25px;
+    border: 3px #A288A6 solid;
+}
+
+.form input{
+    border: none;
+    background: rgba(37, 36, 42, 0.2);
+    height: 2.625rem;
+    width: 18.25rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.form input::placeholder{
+    color: rgb(38, 38, 38);
+    font-weight: 500;
+    
+}
+
+.form #LoginADM{
+    background: #F1E3E4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    height: 2.4375rem;
+    width: 9.125rem;
+
+}*/
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body,
+input,
+button {
+    font-size: medium;
+    font-family: "League Spartan", sans-serif;
+}
+
+body{
+    background: rgb(241,227,228);
+    background: linear-gradient(0deg, rgba(241,227,228,1) 0%, rgba(162,136,166,1) 100%);
+    color: white;
+}
+
+input,
+button{
+    border: none;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.img__login img{
+    margin: auto;
+    display: block;
+}
+
+.login{
+    position: relative;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+}
+
+.login__form{
+    position: relative;
+    background-color: hsla(0, 0%, 10%, .1);
+    border: 2px solid white;
+    margin-inline: 1.5rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+}
+
+.login__title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login__content,
+.login__box{
+    display: grid;
+}
+
+login__content{
+    row-gap: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.login__box{
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    column-gap: .75rem;
+    border-bottom: 2px solid white;
+}
+
+.login__icon,
+.login__eye{
+    font-size: 1.25rem;
+}
+
+.login__input{
+    width: 100%;
+    padding-block: .8rem;
+    background: none;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.login__box-input{
+    position: relative;
+}
+
+.login__label{
+    position: absolute;
+    left: 0;
+    top: 13px;
+    font-weight: 500;
+    transition: top .3s, font-size .3s;
+}
+
+.login__eye{
+    position: absolute;
+    right: 0;
+    top: 18px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.login__box:nth-child(2) input{
+    padding-right: 1.8rem;
+}
+
+.login__check,
+.login__check-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login__check{
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.login__check-label,
+.login__forgot,
+.login__register{
+    font-size:small;
+}
+
+.login__check-group{
+    column-gap: 5rem;
+}
+
+.login__check-input{
+    width: 16px;
+    height: 16px;
+}
+
+.login__forgot{
+    color: white;
+}
+
+.login__forgot:hover{
+    text-decoration: underline;
+}
+
+.login__button{
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: white;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.login__register{
+    text-align: center;
+}
+
+.login__register a{
+    color: white;
+    font-weight: 500;
+}
+
+.login__register a:hover{
+    text-decoration: underline;
+}
+
+.login__input:focus + .login__label{
+    top: -12px;
+    font-size: small;
+}
+
+.login__input:not(:placeholder-shown).login__input:not(:focus) + .login__label{
+    top: -12px;
+    font-size: small;
+}
+
+@media screen and (min-width: 576px){
+    .login{
+        justify-content: center;
+        
+    }
+    .login__forgot{
+       width: 432px;
+       padding: 4rem 3rem 3.5rem;
+       border-radius: 1.5rem;     
+    }
+    .login__title{
+        font-size: 2rem;
+    }
+}

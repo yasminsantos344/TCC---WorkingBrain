@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    width: auto;
+    height: auto;
+}
+
+body {
+    font-family: "League Spartan", sans serif;
+}
+
+.menu-dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+nav {
+    width: auto;
+    height: 20%;
+    box-shadow: #a8a8a8 0.5rem 0.5rem 1rem;
+    background-color: #f2f2f2;
+    margin: auto;
+    font-family: "League Spartan", sans serif;
+    padding-bottom: 15px;
+}
+
+navbar-brand d-flexallign-items-center {
+    text-align: center;
+}
+
+ul{
+    width: auto;
+}
+
+.dropdown-item:hover{
+    background-color: #1b59df;
+    color: #f2f2f2;
+}
+
+h1 {
+    color: #252525;
+}
+
+.cards {
+    padding: 5%;
+    background-color: #f2f2f2;
+    box-shadow: #252525 5rem 5rem 10rem;
+}
+
+.cards a {
+    text-decoration: none;
+}
+
+.card {
+    text-align: center;
+    border-color: #fcfcfc;
+    transition: 300ms linear;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card-body {
+    height: 20rem;
+    color: #252525;
+}
+
+.dicas {
+    padding: 5%;
+    background-color: #CAE8F3;
+}
+
+footer {
+    padding: 2rem;
+    background-color: #F0CDCD;
+}
+
+footer img {
+    padding-left: 0rem;
+    padding-right: 5rem;
+}
+
+footer h6{
+    color: #7a7a7a;
+}
+
+@media (max-width: 576px){
+    .menu-dropdown{
+        left: auto;
+        right: 0;
+    }
+
+}

@@ -49,14 +49,36 @@ class Login{
 
     public function LoginAluno(){
         include_once "../Conexao.php";
+        //echo $this -> Email_Aluno . $this -> Senha_Aluno;
+        
+
+
+        //if(empty($this -> Email_Aluno) || empty($this -> Senha_Aluno)){
+        //    $retorno = 'index.html';
+        //}                
 
         try{
             $comando = $conexao -> prepare("SELECT Email_Aluno, Senha_Aluno FROM TB_Aluno WHERE Email_Aluno = ? AND Senha_Aluno = ?");
             $comando -> bindParam(1, $this -> Email_Aluno);
             $comando -> bindParam(2, $this -> Senha_Aluno);
-           
+
+            /*$MySQL = $comando -> execute();
+            
+
+            $resultado = mysqli_num_rows($MySQL);
+           echo $resultado;
+           exit;
+                if($resultado == 1){
+                    $_SESSION['usuarioAluno'];
+                    $retorno =  'Porra';
+                    
+                }
+                
+                else{
+                    $retorno = 'Não encontrado';
+                }*/
                 if($comando -> execute()){
-                    $retorno =  'Sucesso';
+                    $retorno =  $comando -> fetchALL(PDO::FETCH_ASSOC);
                 }
                 
         }
@@ -118,6 +140,8 @@ class Login{
             $retorno = "Ops!" . $Erro -> getMessage();  
         }
     }
+
+    
     }
 
 

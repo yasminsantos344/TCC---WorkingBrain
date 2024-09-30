@@ -16,7 +16,28 @@ $Log -> setEmail_Professor($Email_Professor);
 $Log -> setSenha_Professor($Senha_Professor);
 
 if(ISSET($_GET["LoginAluno"])){
-    echo $Log -> LoginAluno();
+    $Dados = $Log -> LoginAluno();
+
+    if(empty($Dados)){
+        echo 'Preencha todos os campos!';
+
+    }
+
+    else{
+        foreach($Dados as $Dd){
+            //array
+            if($Dd['Email_Aluno'] == $Email_Aluno && $Dd['Senha_Aluno'] == $Senha_Aluno){
+                echo 'Sucesso' ;
+            }
+            
+            else{
+                echo "Email ou Senha incorretos!";
+            }
+            
+        }
+    }
+
+    //echo $Log -> LoginAluno();
 }
 
 else if(ISSET($_GET["LoginProfessor"])){

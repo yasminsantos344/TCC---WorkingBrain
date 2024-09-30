@@ -80,7 +80,7 @@ class Administrador{
 
             
             if($comando -> execute()){         
-                $retorno = "Cadastro realizada com sucesso!";
+                $retorno = "sucesso";
                 
             }
     
@@ -151,6 +151,29 @@ class Administrador{
     
         return $retorno;
     
+    }
+
+    // Método LoginADM
+
+    public function LoginADM(){
+        include_once "../Conexao.php";
+
+        try{
+            $comando = $conexao -> prepare("SELECT Email_ADM, Senha_ADM FROM TB_ADM WHERE Email_ADM = ? AND Senha_ADM = ?");
+            $comando -> bindParam(1, $this -> Email_ADM);
+            $comando -> bindParam(2, $this -> Senha_ADM);
+           
+                if($comando -> execute()){
+                    $retorno =  $comando -> fetchALL(PDO::FETCH_ASSOC);
+                }
+                
+        }
+    
+        catch(PDOException $Erro){
+            $retorno = "Não encontrado" . $Erro -> getMessage();
+        }
+    
+        return $retorno;
     }
     
 }

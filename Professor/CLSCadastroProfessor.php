@@ -192,10 +192,15 @@ class CadastroProfessor{
         include "../Conexao.php";
 
         try{
-            
-        }
-        catch(){
+            $comando = $conexao -> prepare("DELETE FROM TB_Professor WHERE CPF_Professor = ? ");
+            $comando -> bindParam(1, $this -> CPF_Professor);
 
+            if($comando -> execute()){         
+                $retorno = "Sua conta foi excluida";
+            }
+        }
+        catch(PDOException $Erro){
+            $retorno = "Erro" . $Erro -> getMessage();
         }
 
     }
