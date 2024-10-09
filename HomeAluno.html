@@ -7,11 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
     
 <title>Home</title>
 </head>
@@ -99,59 +94,53 @@
             <h2><br><strong>MATÉRIAS</strong></h2><br>
             <p id="conteudo">Selecione um conteúdo e comece seus estudos já!</p>
 
-            <div class="carousel slide d-flex" id="mycarousel2" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" id="carousel2">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="single-box">
-                                        <div class="img-area"><img src="../Aluno/assets/icon matéria.png" alt=""></div>
-                                        <div class="img-text" id="cards1">
-                                            <h5>Espanhol</h5>
-                                        </div>
-                                    </div>
+            <div class="slide-container">
+                <div class="slide-content">
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                    <img src="../Aluno/assets/icon matéria.png" alt="" class="card-img">
                                 </div>
-                                <div class="col-md-4"></div>
-                                    <div class="single-box">
-                                        <div class="img-area"><img src="../Aluno/assets/icon matéria (1).png" alt=""></div>
-                                        <div class="img-text" id="cards1">
-                                            <h5>Matemática</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4"></div>
-                                    <div class="single-box">
-                                        <div class="img-area"><img src="../Aluno/assets/icon matéria (2).png" alt=""></div>
-                                        <div class="img-text" id="cards1">
-                                            <h5>Espanhol</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="single-box">
-                                        <div class="img-area"><img src="../Aluno/assets/icon matéria (3).png" alt=""></div>
-                                        <div class="img-text" id="cards1">
-                                            <h5>Espanhol</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="single-box">
-                                        <div class="img-area"><img src="../Aluno/assets/icon matéria (4).png" alt=""></div>
-                                        <div class="img-text" id="cards1">
-                                            <h5>Espanhol</h5>
-                                        </div>
-                                    </div>
-                                </div>
+                            </div>
+
+                            <div class="card-content">
+                                <h2 class="materia">Espanhol</h2>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a href="#mycarousel2" class="carousel-control-prev" role="button" data-slide="prev">
-                    <span class="sr-only">Previous</span>
-                    <span class="carousel-control-prev-icon" arial-hidden="true"></span>
-                </a>
             </div>
         </section>
+        <section>
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,500 L 0,500 C 202.5,358 405,216 645,216 C 885,216 1162.5,358 1440,500 L 1440,500 L 0,500 Z" stroke="none" stroke-width="0" fill="#F2F2F2" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 250)"></path></svg>
+        </section>
+
+        <footer>
+            <div class="container">
+              <div class="row">
+                <img src="assets/brainbox-allblack.png" style="width: 14rem;">
+                <div class="col">
+                  <h2><B>WorkingBrain</B></h2>
+                  <h6>Conteúdos<br>Avaliações<br>Fale com um Professor<br>Meu Perfil</h6>
+                </div>
+                <div class="col">
+                  <h2><b>Social Media</b></h2>
+                  <h6>@workingbrain_oficial<br>WorkingBrain App</h6>
+                </div>
+                <div class="col">
+                  <h2><b>Contact</b></h2>
+                  <h6>+55 (11) 1234-5678<br>brainbox@brainbox.com<br>Brazil </h6>
+                </div>
+              </div>
+            </div>
+          </footer>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 </html>
