@@ -21,7 +21,7 @@
                     <i class="bx bx-user login__icon"></i>
 
                     <div class="login__box-input">
-                        <input type="email" required class="login__input" placeholder=" ">
+                        <input type="email" required class="login__input" placeholder=" " name="Email_ADM" id="Email_ADM">
                         <label class="login__label">Email</label>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                     <i class="bx bx-lock-alt login__icon"></i>
 
                     <div class="login__box-input">
-                        <input type="password" required class="login__input" id="login-pass" placeholder=" ">
+                        <input type="password" required class="login__input" id="login-pass" placeholder=" " name="Senha_ADM" id="Senha_ADM" >
                         <label class="login__label">Senha</label>
                         <i class="bx bx-low-vision login__eye" id="login-eye"></i>
                     </div>
@@ -41,13 +41,13 @@
                 <a href="../Esqueci_Minha_Senha/esqueci_minha_senha.html" class="login__forgot">Esqueci minha senha</a>
             </div>
 
-            <button class="login__button" onclick="FLoginADM()">Login</button>
+            <input type="button" value="Log-in" class="login__button" onclick="FLoginADM()">
 
             <p class="login__register">
                 Não tem uma conta? <a href="../Cadastro/cadastro.html">Crie aqui</a>
             </p>
         </form>
     </div>
-    <script src="../Login/js/main.js"></script>
+    <script src="../Login/js/LoginADM.js"></script>
 </body>
 </html>

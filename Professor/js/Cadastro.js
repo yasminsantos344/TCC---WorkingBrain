@@ -38,76 +38,7 @@ function FSolicitaProfessor(){
     }
 }
 
-function Exibir(){
 
-    $.ajax({
-    url: '../Professor/ContrProfessor.php?Exibir',
-
-        beforeSend: function(){
-            $("#box-solicitacoes").html("Buscando solicitações...");
-        }
-    })
-
-    .done(function(dadosPHP){
-        let DadosProf = JSON.parse(dadosPHP);
-
-        var bloco = '';
-        for(i = 0; i < DadosProf.length; i++ ){
-            bloco += '<div class="DivSolicitacao">';
-            bloco += "<b>Nome:</b> " + DadosProf[i].Nome_Professor + "<br>";
-            bloco += "<b>Data de Nascimento:</b> " + DadosProf[i].Data_Nascimento_Professor + "<br>";
-            bloco += "<b>CPF:</b> " + DadosProf[i].CPF_Professor + "<br>";
-            bloco += "<b>Email:</b> " + DadosProf[i].Email_Professor + "<br>";
-            bloco += "<b>Celular:</b> " + DadosProf[i].Celular_Professor + "<br>";
-            bloco += "<b>CEP:</b> " + DadosProf[i].CEP_Professor + "<br>";
-            bloco += "<b>Endereco:</b> " + DadosProf[i].Endereco_Professor + "<br>";
-            bloco += "<b>Bairro:</b> " + DadosProf[i].Bairro_Professor + "<br>";
-            bloco += "<b>Cidade:</b> " + DadosProf[i].Bairro_Professor + "<br>";
-            bloco += "<b>UF:</b> " + DadosProf[i].UF_Professor + "<br>";
-            bloco += "<b>Numero: </b>" + DadosProf[i].Endereco_Numero_Professor + "<br>";
-            bloco += "<b>Complemento:</b> " + DadosProf[i].Endereco_Complemento_Professor + "<br>";
-            bloco += '<input type="button" class="botao-div" name="Cadastrar" id="Cadastrar" value="Aceitar" onclick="CadastrarProfessor()">';
-            bloco += '<input type="button" class="botao-div" name="NegarCadastro" id="Negar" value="Negar" onclick="RejeitarCadastro()">';
-            bloco += "</div>";
-            
-        }
-
-
-        $("#box-solicitacoes").html(bloco);
-        console.log(bloco);
-
-    })
-
-    .fail(function(){
-        $("#box-solicitacoes").html("Falha na Exibição");
-    })
-}
-
-
-function CadastroProfessor(){
-
-
-
-    var DadosProfessor = $('#Cadastro').serialize();
-
-$.ajax({
-            method: 'GET',
-            url: 'ContrProfessor.php?Matricula',
-            data: DadosAluno,
-    
-            beforeSend: function(){
-                $("#resultado").html("...");
-            }
-        })
-    
-        .done(function(dadosPHP){
-            $("#resultado").html("Cadastro realizada com sucesso!");
-        })
-    
-        .fail(function(){
-            $("#ressultado").html("Falha no Cadastro");
-        })
-}
 
 //API CEP
 

@@ -28,7 +28,7 @@ function FLoginAluno(){
 
    .done(function(dadosPHP){
         if(dadosPHP == 'Sucesso'){
-            window.location.replace("http://localhost/TCC---WorkingBrain-main/Aluno/HomeAluno.html");
+            window.location.replace("http://localhost/TCC---WorkingBrain-main/Aluno/HomeAluno.php");
             
         }
         else{
@@ -52,14 +52,13 @@ function FLoginProfessor(){
    })
 
    .done(function(dadosPHP){
-    alert(dadosPHP);
-        /*if(dadosPHP == 'Sucesso'){
-            window.location.replace("http://localhost/TCC---WorkingBrain-main/Aluno/HomeProfessor.html");
+        if(dadosPHP == 'Sucesso'){
+            window.location.replace("http://localhost/TCC---WorkingBrain-main/Aluno/HomeProfessor.php");
         }
 
         else{
-            alert("Email ou Senha incorreto! Tente novamente");
-        }*/
+            alert(dadosPHP);
+        }
    })
 
    .fail(function(){

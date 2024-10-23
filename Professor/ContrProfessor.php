@@ -38,6 +38,3 @@ if(isset($_GET["Solicitar"])){
     echo $CadP -> Solicitar();
 }
 
-else if(isset($_GET["Exibir"])){
-    echo $CadP -> Exibir();
-}

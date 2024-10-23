@@ -165,26 +165,7 @@ class CadastroProfessor{
 
     //Método - Exibir Solicitação
 
-    public function Exibir(){
-        include_once "../Conexao.php";
-
-        try{
-            $comando = $conexao -> prepare("SELECT Nome_Professor, Data_Nascimento_Professor,CPF_Professor, Email_Professor, Celular_Professor, CEP_Professor, Endereco_Professor, Bairro_Professor, Cidade_Professor, UF_Professor, Endereco_Numero_Professor, Endereco_Complemento_Professor FROM TB_Solicitar");
-                       
-            $comando -> execute();
-            $Matriz =  $comando -> fetchALL();            
-            $retorno = json_encode($Matriz);
-
     
-        }
-    
-        catch(PDOException $Erro){
-            $retorno = "Erro" . $Erro -> getMessage();
-        }
-    
-        return $retorno;
-
-    }
 
     // Método excluir conta
 

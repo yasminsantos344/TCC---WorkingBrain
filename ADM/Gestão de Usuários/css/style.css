@@ -122,6 +122,37 @@
     left: 0;
 }
 
+.DivSolicitacao{
+    /* From https://css.glass */
+    background: rgba(250, 250, 250, 0.52);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.778);
+    margin: 1rem auto;
+    width: 90%;
+
+    
+}
+
+.botao-div{
+    height: 2rem;
+    width: 8rem;
+    border: none;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 7px;
+    background-color: #A288A6;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    transition: 500ms;
+    margin: 0 0 0 1rem;
+}.botao-div:hover{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.446));
+    cursor: pointer;
+}
+
 @media screen and (min-width: 1024px) {
     :root {
     --normal-font-size: 1rem;

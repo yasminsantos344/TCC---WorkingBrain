@@ -28,10 +28,16 @@ if(ISSET($_GET["LoginAluno"])){
             //array
             if($Dd['Email_Aluno'] == $Email_Aluno && $Dd['Senha_Aluno'] == $Senha_Aluno){
                 echo 'Sucesso' ;
+
+                session_start();
+                $_SESSION['Email_Aluno'] = $Email_Aluno;
+                $_SESSION['Senha_Aluno'] = $Senha_Aluno;
             }
             
             else{
                 echo "Email ou Senha incorretos!";
+                unset ($_SESSION['Email_Aluno']);
+                unset ($_SESSION['Senha_Aluno']);
             }
             
         }
@@ -54,11 +60,17 @@ else if(ISSET($_GET["LoginProfessor"])){
         foreach($Dados as $Dd){
             //array
             if($Dd['Email_Professor'] == $Email_Professor && $Dd['Senha_Professor'] == $Senha_Professor){
-                echo "<script> window.location.replace(http://localhost/TCC---WorkingBrain-main/Professor/HomeProfessor.html)</script>";
+                echo "sucesso";
+
+                session_start();
+                $_SESSION['Email_Professor'] = $Email_Professor;
+                $_SESSION['Senha_Professor'] = $Senha_Professor;
             }
             
             else{
                 echo "Email ou Senha incorretos!";
+                unset ($_SESSION['Email_Professor']);
+                unset ($_SESSION['Senha_Professor']);
             }
             
         }

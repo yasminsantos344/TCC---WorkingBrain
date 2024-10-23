@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -16,16 +17,21 @@
         <br><br>
         <div class="row">
             <div class="col">
+              <label for="">Email:</label>
+              <input type="email" class="form-control" placeholder="Digite seu email" name="Email_ADM" id="Email_ADM">
+
               <label for="">Nova Senha:</label>
-              <input type="password" class="form-control" placeholder="Digite uma nova senha">
+              <input type="password" class="form-control" placeholder="Digite uma nova senha" name="Senha_ADM" id="Senha_ADM">
 
               <label for="">Confirme a Senha:</label>
-              <input type="password" class="form-control" placeholder="Confirme a senha novamente">
+              <input type="password" class="form-control" placeholder="Confirme a senha novamente" id="Confirmacao">
               <div class="button">
-                <button type="submit" class="button__cad">Cadastrar</button>
+                <input type="button" value="Alterar" class="button__cad" onclick="MudarSenha()">
               </div>
             </div>
           </div>
     </div>
 </body>
+
+<script src="../Login/js/LoginADM.js"></script>
 </html>
