@@ -15,7 +15,7 @@ function FCadastroADM(){
 
         if(Senha_ADM == Confirmacao){
             setTimeout(function(){
-            window.location.replace("http://localhost/TCC---WorkingBrain-main/ADM/Perfil/perfil.html");
+            window.location.replace("http://localhost/TCC---WorkingBrain-main/ADM/Login/LoginADM");
         }, 1000);
 
         }

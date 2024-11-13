@@ -52,8 +52,8 @@ function FLoginProfessor(){
    })
 
    .done(function(dadosPHP){
-        if(dadosPHP == 'Sucesso'){
-            window.location.replace("http://localhost/TCC---WorkingBrain-main/Aluno/HomeProfessor.php");
+        if(dadosPHP == 'sucesso'){
+            window.location.replace("http://localhost/TCC---WorkingBrain-main/Professor/HomeProfessor.php");
         }
 
         else{

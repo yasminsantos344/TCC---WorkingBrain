@@ -28,9 +28,9 @@ function FCadastroAluno (){
                 resposta.classList.add("ativo");
 
                 if(dadosPHP = 'Matrícula realizada com sucesso!'){
-                    setTimeout(function(){
-                    window.location.replace("http://localhost/TCC---WorkingBrain-main/Cronogramas/Opcoes.html");
-                }, 3000);
+                    //setTimeout(function(){
+                    //window.location.replace("http://localhost/TCC---WorkingBrain-main/Cronogramas/Opcoes.html");
+                //}, 3000);
                 }
 
                 

@@ -24,6 +24,10 @@ $ADM -> setCPF_Professor($CPF_Professor);
 $ID_Solicitacoes = filter_input(INPUT_GET, "ID_Solicitacoes");
 $ADM -> setID_Solicitacoes($ID_Solicitacoes);
 
+$Diretriz = filter_input(INPUT_GET, "diretrizes");
+
+$ADM -> setDiretriz($Diretriz);
+
 
 //echo $ID_Solicitacoes;
 //exit;
@@ -51,6 +55,7 @@ else if(isset($_GET["Exibir"])){
 else if(ISSET($_GET["LoginADM"])){
     $Dados = $ADM -> LoginADM();
 
+
     if(empty($Dados)){
         echo 'Preencha todos os campos!';
 
@@ -61,16 +66,33 @@ else if(ISSET($_GET["LoginADM"])){
             //array
             if($Dd['Email_ADM'] == $Email_ADM && $Dd['Senha_ADM'] == $Senha_ADM){
                 echo 'Sucesso' ;
+                
+
+                $Nome_ADM = $Dd['Nome_ADM'];
+                $Nascimento_ADM = $Dd['Nascimento_ADM'];
+                $Celular_ADM = $Dd['Celular_ADM'];
+
+                
+                
+
 
                 session_start();
-                $_SESSION['Email_ADM'] = $Email_ADM;
-                $_SESSION['Senha_ADM'] = $Senha_ADM;
+                $_SESSION['Email_ADM']      = $Email_ADM;
+                $_SESSION['Senha_ADM']      = $Senha_ADM;
+                $_SESSION['Nome_ADM']       = $Nome_ADM;
+                $_SESSION['Nascimento_ADM'] = $Nascimento_ADM;
+                $_SESSION['Celular_ADM']    = $Celular_ADM;
+
             }
             
             else{
                 echo "Email ou Senha incorretos!";
                 unset ($_SESSION['Email_ADM']);
                 unset ($_SESSION['Senha_ADM']);
+                unset ($_SESSION['Nome_ADM']);
+                unset ($_SESSION['Nascimento_ADM']);
+                unset ($_SESSION['Celular_ADM']);
+
 
             }
             
@@ -105,3 +127,14 @@ else if(isset($_GET["DadosAlunos"])){
     //echo $ADM -> DadosAlunos();
 }
 
+else if(isset($_GET["Diretriz"])){
+    echo $ADM -> ExibirDiretriz();
+}
+
+else if(isset($_GET["MudaDiretriz"])){
+    echo $ADM -> MudarDiretriz();
+}
+
+else if(isset($_GET["Dados"])){
+    echo $ADM -> DadosPerfil();
+}

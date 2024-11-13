@@ -69,32 +69,32 @@ $logado = $_SESSION['Email_ADM'];
                 <div class="nav__list">
                     <div class="nav__items">
 
-                        <a href="../Gestão de Usuários/gestão_usuarios.html" class="nav__link">
+                        <a href="../Gestão de Usuários/gestão_usuarios.php" class="nav__link">
                             <i class="bx bx-user nav__icon"></i>
                             <span class="nav__name">Gestão de Usuários</span>
                         </a>
 
-                        <a href="../Gestão de Conteúdos/conteudos.html" class="nav__link">
+                        <a href="../Gestão de Conteúdos/conteudos.php" class="nav__link">
                             <i class="bx bx-receipt nav__icon"></i>
                             <span class="nav__name">Gestão de Conteúdos</span>
                         </a>
 
-                        <a href="../Políticas e Diretrizes/politicas.html" class="nav__link">
+                        <a href="../Políticas e Diretrizes/politicas.php" class="nav__link">
                             <i class="bx bx-cog nav__icon"></i>
                             <span class="nav__name">Configurações do<br>Sistema</span>
                         </a>
 
-                        <a href="../Suporte Técnico/suporte.html" class="nav__link">
+                        <a href="../Suporte Técnico/suporte.php" class="nav__link">
                             <i class="bx bx-message-rounded nav__icon"></i>
                             <span class="nav__name">Suporte Técnico</span>
                         </a>
 
-                        <a href="../Gráficos/graficos.html" class="nav__link">
+                        <a href="../Gráficos/graficos.php" class="nav__link">
                             <i class="bx bx-line-chart nav__icon"></i>
                             <span class="nav__name">Monitoramento de<br>Atividades</span>
                         </a>
 
-                        <a href="../Perfil/perfil.html" class="nav__link">
+                        <a href="../Perfil/perfil.php" class="nav__link">
                             <i class="bx bx-id-card nav__icon"></i>
                             <span class="nav__name">Meu Perfil</span>
                         </a>

@@ -1,3 +1,13 @@
+<?php
+session_start();
+if((!isset ($_SESSION['Email_ADM']) == true) and (!isset ($_SESSION['Senha_ADM']) == true))
+{
+  header('location:index.html');
+  }
+
+$logado = $_SESSION['Email_ADM'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,17 +17,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="../Políticas e Diretrizes/css/style.css">
-    <title>Suporte Técnico</title>
+    <title>Configurações do Sistema</title>
 </head> 
 <body class="body">
     <main class="main container-fluid h-100">
         <header class="header d-flex justify-content-between align-items-center">
             <div class="titulo">
-                <h2>Suporte Técnico</h2>
+                <h2>Configurações do Sistema</h2>
             </div>
 
             <div class="perfil">
-                <img src="../Suporte Técnico/assets/perfil-icon.png" alt="" srcset="" style="width: 11rem;">
+                <img src="../Políticas e Diretrizes/assets/perfil-icon.png" alt="" srcset="" style="width: 11rem;">
             </div>
 
             <div class="header__toggle">
@@ -26,18 +36,23 @@
 
         </header>
         <br>
-        <section class="section d-flex align-items-left">
+          <section class="section d-flex align-items-left">
             <div class="container">
-                <div class="row">
-                  <div class="col">
-                    <h2>Caixa de Mensagens</h2>
-                    <img src="assets/perfil-icon.svg" alt="">
-                  </div>
-                  <div class="vl"></div>
-                  <div class="col" style="text-align: left;">
-                    <img src="../Suporte Técnico/assets/user-icon.svg" alt="">
-                  </div>
+                <form action="" id="Diretriz">
+                <h4>Políticas de Uso e Diretrizes de Conteúdo</h4>
+                <div class="conteudo" id="conteudo" >
+                
                 </div>
+                
+                    <div class="col d-flex justify-content-around" style="align-items: end; margin-top: 2rem;">
+                        <button type="button" id="btEditar" class="edit" onclick="EditarDiretrizes()">Editar</button>
+                        <button type="button" class="save" onclick="MudarDiretrizes()">Salvar</button>
+                        </div>  
+                        
+                        <input type="text" name="Diretriz" class="Diretriz" id="Diretriz">
+                    
+                    
+                </form>  
               </div>
         </section>
     </main>
@@ -52,32 +67,32 @@
                 <div class="nav__list">
                     <div class="nav__items">
 
-                        <a href="../Gestão de Usuários/gestão_usuarios.html" class="nav__link">
+                        <a href="../Gestão de Usuários/gestão_usuarios.php" class="nav__link">
                             <i class="bx bx-user nav__icon"></i>
                             <span class="nav__name">Gestão de Usuários</span>
                         </a>
 
-                        <a href="../Gestão de Conteúdos/conteudos.html" class="nav__link">
+                        <a href="../Gestão de Conteúdos/conteudos.php" class="nav__link">
                             <i class="bx bx-receipt nav__icon"></i>
                             <span class="nav__name">Gestão de Conteúdos</span>
                         </a>
 
-                        <a href="../Políticas e Diretrizes/politicas.html" class="nav__link">
+                        <a href="../Políticas e Diretrizes/politicas.php" class="nav__link">
                             <i class="bx bx-cog nav__icon"></i>
                             <span class="nav__name">Configurações do<br>Sistema</span>
                         </a>
 
-                        <a href="../Suporte Técnico/suporte.html" class="nav__link">
+                        <a href="../Suporte Técnico/suporte.php" class="nav__link">
                             <i class="bx bx-message-rounded nav__icon"></i>
                             <span class="nav__name">Suporte Técnico</span>
                         </a>
 
-                        <a href="../Gráficos/graficos.html" class="nav__link">
+                        <a href="../Gráficos/graficos.php" class="nav__link">
                             <i class="bx bx-line-chart nav__icon"></i>
                             <span class="nav__name">Monitoramento de<br>Atividades</span>
                         </a>
 
-                        <a href="../Perfil/perfil.html" class="nav__link">
+                        <a href="../Perfil/perfil.php" class="nav__link">
                             <i class="bx bx-id-card nav__icon"></i>
                             <span class="nav__name">Meu Perfil</span>
                         </a>
@@ -92,5 +107,6 @@
         </nav>
     </div>
     <script src="../Políticas e Diretrizes/js/sidebar.js"></script>
+    <script src="../Políticas e Diretrizes/js/Politicas.js"></script>
 </body>
 </html>

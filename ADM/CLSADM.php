@@ -9,6 +9,8 @@ class Administrador{
     private $Senha_ADM;
     private $Celular_ADM;
     Private $Status_ADM;
+    Private $Diretriz;
+    
 
     // Variáveis cadastro professor
     private $CPF_Professor;
@@ -86,6 +88,17 @@ class Administrador{
         $this -> ID_Solicitacoes = $ID_Solicitacoes;
     }
 
+    //Get - Set (Aulas)
+
+    public function getDiretriz(){
+        return $this -> Diretriz;
+    }
+
+    public function setDiretriz($Diretriz){
+        $this -> Diretriz = $Diretriz;
+    }
+
+   
     //Método Cadastro ADM
 
     public function CadastroADM(){
@@ -183,9 +196,12 @@ class Administrador{
         include_once "../Conexao.php";
 
         try{
-            $comando = $conexao -> prepare("SELECT Email_ADM, Senha_ADM FROM TB_ADM WHERE Email_ADM = ? AND Senha_ADM = ?");
+            $comando = $conexao -> prepare("SELECT Email_ADM, Senha_ADM, Nome_ADM, DATE_FORMAT(Nascimento_ADM,'%d/%m/%Y') as Nascimento_ADM , Celular_ADM FROM TB_ADM WHERE Email_ADM = ? AND Senha_ADM = ?");
             $comando -> bindParam(1, $this -> Email_ADM);
             $comando -> bindParam(2, $this -> Senha_ADM);
+            /*$comando -> bindParam(3, $this -> Nome_ADM);
+            $comando -> bindParam(4, $this -> Nascimento_ADM);
+            $comando -> bindParam(5, $this -> Celular_ADM);*/
            
                 if($comando -> execute()){
                     $retorno =  $comando -> fetchALL(PDO::FETCH_ASSOC);
@@ -384,6 +400,70 @@ public function DadosAlunos(){
        return $retorno;
 
     }    
+
+}
+
+public function ExibirDiretriz(){
+    include_once "../Conexao.php";
+
+    try{
+        $comando = $conexao -> prepare("SELECT Diretriz FROM TB_Diretriz");
+                   
+        $comando -> execute();
+        $Matriz =  $comando -> fetchALL();            
+        $retorno = json_encode($Matriz);
+
+
+    }
+
+    catch(PDOException $Erro){
+        $retorno = "Erro" . $Erro -> getMessage();
+    }
+
+    return $retorno;
+
+}
+
+public function MudarDiretriz(){
+    include_once "../Conexao.php";
+
+    try{
+        $comando = $conexao -> prepare("UPDATE TB_Diretriz SET Diretriz = ? WHERE ID_Diretriz= 1");
+         
+         $comando -> bindParam(1, $this -> Diretriz);             
+
+        $comando -> execute();
+        $Matriz =  $comando -> fetchALL();            
+        $retorno = json_encode($Matriz);
+
+
+    }
+
+    catch(PDOException $Erro){
+        $retorno = "Erro na solicitação!" . $Erro -> getMessage();
+    }
+
+    return $retorno;
+}
+
+public function DadosPerfil(){
+    include_once "../Conexao.php";
+
+    try{
+        $comando = $conexao -> prepare("SELECT Nome_ADM, Nascimento_ADM , Email_ADM, Celular_ADM FROM TB_ADM");
+                   
+        $comando -> execute();
+        $Matriz =  $comando -> fetchALL();            
+        $retorno = json_encode($Matriz);
+
+
+    }
+
+    catch(PDOException $Erro){
+        $retorno = "Erro" . $Erro -> getMessage();
+    }
+
+    return $retorno;
 
 }
 

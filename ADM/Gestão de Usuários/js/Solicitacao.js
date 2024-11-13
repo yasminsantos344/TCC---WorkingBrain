@@ -46,7 +46,7 @@ function CadastrarProfessor(){
 
     $.ajax({
         method: 'GET',
-        url: 'ContrADM.php?Cadastrar' + CPF_Professor,
+        url: '../ContrADM.php?Cadastrar&CPF_Professor=' + CPF_Professor,
         //data: CPF_Professor,
 
         beforeSend: function(){

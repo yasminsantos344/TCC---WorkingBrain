@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    width: auto;
+    height: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "League Spartan", sans-serif;
+    background-color: #f2f2f2;
+}
+
+.menu-dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+nav .btn{
+    background-color: #CAE8F3;
+}
+
+nav {
+    width: auto;
+    height: auto;
+    box-shadow: #a8a8a8 0.5rem 0.5rem 1rem;
+    background-color: #f2f2f2;
+}
+
+.navbar-brand d-flexallign-items-center {
+    text-align: center;
+}
+
+.navbar-text {
+    color: #252525;
+}
+
+.form .form-control {
+    background-color: #F9A5A5;
+}
+
+.form .form-control:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.input-group .btn {
+    background-color: #F9A5A5;
+}
+
+.input-group .btn:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.btn-group .btn{
+    color: #F9A5A5;
+    border-radius: 50% 50% 50% 50%; 
+    background-color: #f2f2f2; 
+    border-color: #f2f2f2;
+}
+
+.btn-group, .btn:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+h1 {
+    color: #6893EF;
+    text-align: right;
+}
+
+.card-tittle {
+    background-color: #F6E1E1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    position: relative;
+}
+
+.boneco {
+    position: absolute;
+    top: 50%;
+    left: 67%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.boneco img {
+    width: 95%;
+}
+
+section {
+    background-color: #F6E1E1;
+}
+
+@media screen and (max-width: 600px){
+    .card .card-body h5 {
+        font-size: large;
+        font-weight: 500;
+        padding: 3%;
+    }
+    .card .card-body img {
+        width: 30%;
+    }
+    .card .card-body input {
+        padding-bottom: 50%;
+    }
+    .cards h1{
+        font-size: large;
+        padding-top: 18%;
+    }
+    .forms form label {
+        padding: 2%;
+        border-radius: 10px;
+    }
+}
+
+.materias {
+    text-align: center;
+    padding-top: 2%;
+    font-size: 300%;
+}
+
+.materias .container{
+    padding-top: 5%;
+}
+
+    .cards {
+        padding: 3%;
+}
+
+.cards h1{
+    text-align: center;
+    padding-top: 7%;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
+
+.card-body img {
+    width: 30%;
+    height: auto;
+}
+
+.card-body h5 {
+    padding-left: 3%;
+}
+
+
+.card {
+    text-align: center;
+    border-color: #fcfcfc;
+    transition: 300ms linear;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+  
+  .glyphcon {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+  }
+  li {
+    text-align: left;
+    list-style-type: none;
+    padding-bottom: 8%;
+  }
+  
+  /* RADIO BUTTON BEGINS */
+  /* ----------------------------------------- */
+  
+  /* Hides default radio */
+  input[type="radio"] {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+  /* Hover effect for Checkmark */
+  input[type="radio"]:hover + label .outer .inner:before {
+    opacity: .2;
+    display: inline-block;
+    position: absolute;
+    transform: scale(1);
+    transition: all .3s ease;
+  }
+  
+  /* Effect when box is checked */
+  input[type="radio"]:checked + label .inner:before {
+    opacity: 1;
+    transform: scale(1.5);
+    transition: all .2s ease;
+  }
+  
+  /* Effect when box is focused */
+  input[type="radio"]:focus + label .outer .inner:before {
+    opacity: 1;
+    transform: scale(1.5);
+    transition: all .2s ease;
+    transition-delay: .75s;
+  }
+  
+  /* Color change and ripple animation around checkbox */
+  input[type="radio"]:focus + label .outer {
+    transform: translate(0.09em, 0.09em);
+    box-shadow: 0px 0px 0px 0px rgba(200, 200, 200, 0.1);
+    border: 3px solid #F9A5A5;
+    transition-delay: .75s;
+    animation: boom 1s ease-out;
+    animation-delay: .75s;
+  }
+  
+  /* Text color change and underline when clicked */
+  input[type="radio"]:focus + label .inlet .text__effect {
+    transition: all .2s ease-out;
+    color: var(--accent);
+    border-bottom: 1px solid #F9A5A5;
+    border-bottom-height: 20px;
+  }
+  
+  /* Adds pointer cursor to text when hovered */
+  input[type="radio"] + label .inlet .text__effect {
+    cursor: pointer;
+  }
+  
+  /* Sends paperplane into button */
+  input[type="radio"]:focus + label .outer .inner:after {
+    opacity: 1;
+    transform: translate(140px, -150px) scale(.01);
+    transition: all 1s ease;
+  }
+  
+  /* Checkbox circle */
+  .outer {
+    width: 30px;
+    height: 30px;
+    border: 2.5px solid #252525;
+    position: relative;
+    display: inline-block;
+    background: transparent;
+    margin: 25px 20px 0 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 0;
+  }
+  
+  .outer .inner:before:hover {
+    opacity: 1;
+  }
+  
+  /* Checkmark & paperplane */
+  .inner {
+    position: relative;
+    font-family: FontAwesome;
+  }
+  
+  .inner:before {
+    content: "\f00c";
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    top: 50%;
+    left: 7px;
+    color: #252525;
+    transform: scale(0) translateY(-50%);
+  }
+  
+  .inner:after {
+    content: '\f1d9';
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    left: -140px;
+    bottom: -180px;
+    font-size: 2em;
+    transform: scale(3);
+    color: #252525;
+  }
+  
+  /* Label text. Wrapped in span to control border-bottom */
+  .inlet {
+    position: relative;
+    top: -27px;
+    left: 80px;
+    color: #252525;
+  }
+  
+  /* Animation */
+  @keyframes boom {
+    0% {
+      box-shadow: 0px 0px 0px 15px rgba(100, 100, 100, 0.25);
+    }
+    100% {
+      box-shadow: 0px 0px 0px 15px rgba(100, 100, 100, 0.0);
+    }
+  }
+  
+
+.forms {
+    background-color: white;
+    padding: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forms form{
+    padding: 10%;
+    padding-top: -50%;
+}
+
+.forms form label {
+    font-weight: 600;
+    font-size: x-large;
+    font-family: 'League Spartan';
+    background-color: #F9A5A5;
+    padding: 0.5%;
+    border-radius: 10px;
+}
+
+.forms form input {
+    border: #252525 solid 2px;
+}
+
+.forms .inputs {
+    background-color: #F0CDCD;
+    height: 20%;
+    width: 70%;
+    border-radius: 15px;
+    margin-bottom: 10%;
+    box-shadow: #a8a8a8 0.5rem 0.5rem 1rem;
+}
+
+.forms .inputs button {
+    background-color: #F9A5A5;
+    color: #252525;
+    border: #252525 solid 3px;
+    font-weight: 700;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: larger;
+}
+
+.forms .inputs button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #252525;
+    transform: scale(1.1);
+    align-items: center;
+}
+
+.forms .botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
+
+footer {
+    padding: 2rem;
+    background-color: #F0CDCD;
+}
+
+footer img {
+    padding-left: 0rem;
+    padding-right: 5rem;
+}
+
+footer h6{
+    color: #7a7a7a;
+}
+

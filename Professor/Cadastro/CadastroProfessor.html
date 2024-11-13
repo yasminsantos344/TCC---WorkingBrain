@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Professor/css/CadastroProfessor.css">
+    <title>Faça sua matrícula</title>
+</head>
+<body class="body   align-items-center">
+
+    <div class="container container-fluid m-auto">
+        <div class="etapa  d-flex flex-row justify-content-around mt-3">
+            <div class="bola" style="background-color: #C31162; border: 3px #C31162 solid; color: white">1</div>
+            <div class="linha"></div>
+
+            <div class="bola bola-etapa2">2</div>
+            <div class="linha"></div>
+
+            <div class="bola bola-etapa3">3</div>
+
+        </div>
+
+        <form action="" method="get" class="form container-fluid m-auto" id="CadastroProf">
+            <div class="form-etapa1  form">
+                <h1 class="text-center">Sobre mim</h1>
+                <div class="row ">
+                    <div class="coluna col- m-auto">
+                        <label for="nome">Nome:</label><br>
+                        <input type="text" name="Nome_Professor" id="Nome_Professor" placeholder="Digite seu nome"><br>
+        
+                        <label for="nome">Data de Nascimento:</label><br>
+                        <input type="date" name="Data_Nascimento_Professor" id="Data_Nascimento_Professor" placeholder="DD/MM/AAAA"><br>
+
+                        <label for="nome">CPF:</label><br>
+                        <input type="number" name="CPF_Professor" id="CPF_Professor" placeholder="XXX.XXX.XXX-XX"><br>
+
+                        <label for="celular">Celular:</label>
+                        <input type="number" name="Celular_Professor" id="Celular_Professor">
+        
+                    </div>
+        
+                    <div class="coluna col- m-auto">
+                        <label for="email">E-mail:</label><br>
+                        <input type="email" name="Email_Professor" id="Email_Professor" placeholder="Digite seu melhor email"><br>
+        
+                    
+                    </div>
+                                               
+                 </div>
+
+                 <div class="campo-botao d-flex d-flex justify-content-center mb-3 mt-3">
+                    <input type="button" value="Próximo" class="botao" id="passo1">
+                </div>
+    
+                </div>
+
+               
+
+                <div class="form-etapa2 form  container-fluid m-auto ">
+                    <h1 class="text-center">Informações</h1>
+                    <div class="row ">
+                        <div class="coluna col- m-auto">
+    
+                            <span id="cpf_spam" style="color: red;"></span>
+                            <label for="celular">CEP:</label><br>
+                            <input type="number" name="CEP_Professor" id="CEP_Professor" placeholder="XXXXX-XXX"><br>
+    
+                            <label for="Endereco">Endereço:</label><br>
+                            <input type="text" name="Endereco_Professor" id="Endereco_Professor" placeholder="Rua A, Bairro B"><br>
+    
+                            <label for="Bairro">Bairro:</label><br>
+                            <input type="text" name="Bairro_Professor" id="Bairro_Professor" placeholder="Ex.: SP, BA..."><br>
+    
+    
+                        </div>  
+    
+                        <div class="coluna col- m-auto">
+                            <label for="email">Cidade:</label><br>
+                            <input type="text" name="Cidade_Professor" id="Cidade_Professor" placeholder="Digite o numero do endereço"><br>
+    
+                            <label for="email">UF:</label><br>
+                            <input type="text" name="UF_Professor" id="UF_Professor" placeholder="Digite o numero do endereço"><br>
+            
+                            <label for="email">Número:</label><br>
+                            <input type="text" name="Endereco_Numero_Professor" id="Endereco_Numero_Professor" placeholder="Digite o numero do endereço"><br>
+    
+                            <label for="email">Complemento:</label><br>
+                            <input type="text" name="Endereco_Complemento_Professor" id="Endereco_Complemento_Professor" placeholder="EX.: Bloco... "><br>
+                        </div>
+                            
+                            
+                            
+                        </div>
+
+                        <div class="campo-botao d-flex d-flex justify-content-center mb-3 mt-3">
+                            <button class="voltar mr-5" id="voltar2" ><img src="../Professor/assets/arrow_back_ios_new_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="" srcset=""></button>
+                            <input type="button" class="botao"  name="SolicitaProfessor" id="SolicitaProfessor" value="Solicitar"  onclick="FSolicitaProfessor()">
+                        </div>
+        
+                    </div>
+    
+                    
+                </div> 
+                
+            
+            </form>
+
+            </div> 
+            
+           
+    </div>       
+    
+    <div id="resultado" class="resultado m-auto"></div>
+    
+    <script src="../ADM/Solicitacoes.html"></script>
+    <script src="../Professor/js/AnimacaoCad.js"></script> 
+    <script src="../Professor/js/Cadastro.js"></script>
+</body>
+</html>

@@ -7,7 +7,11 @@ if((!isset ($_SESSION['Email_ADM']) == true) and (!isset ($_SESSION['Senha_ADM']
 
   }
 
-$logado = $_SESSION['Email_ADM'];
+  $Email_ADM      = $_SESSION['Email_ADM'];
+  $Senha_ADM      = $_SESSION['Senha_ADM'];
+  $Nome_ADM       = $_SESSION['Nome_ADM'];
+  $Nascimento_ADM = $_SESSION['Nascimento_ADM'];
+  $Celular_ADM    = $_SESSION['Celular_ADM'];
 ?>
 
 <!DOCTYPE html>
@@ -44,26 +48,24 @@ $logado = $_SESSION['Email_ADM'];
                 <div class="row">
                   <div class="col">
                     <h2>Dados Pessoais</h2>
-                    <div class="mb-3">
+                    <div class="mb-3" id="DadosPessoais">
                     <img src="../Perfil/assets/perfil-icon.svg" alt=""><br><br>
-                    <label for="formGroupExampleInput" class="form-label">Nome:</label>
-                    <input class="form-control" id="formGroupExampleInput" style=" width: 90%;">
-                    <br>
-                    <label for="formGroupExampleInput" class="form-label">Usuário:</label>
-                    <input class="form-control" id="formGroupExampleInput" style=" width: 90%;">
-                    <br>
-                    <label for="formGroupExampleInput" class="form-label">Email:</label>
-                    <input class="form-control" id="formGroupExampleInput" style=" width: 90%;">
-                    <br>
-                    <label for="formGroupExampleInput" class="form-label">Contato:</label>
-                    <input class="form-control" id="formGroupExampleInput" style=" width: 90%;">
-                    </div>
-                    <br>
-                    <h5><font color="red">***</font>Observação: Sempre mantenha os dados para contato atualizados.</h5>
-                    <br><br>
-                    <div class="col d-flex justify-content-around align-items-center" style="align-items: center;">
-                    <button type="button" class="edit">Editar</button>
-                    <button type="button" class="save">Salvar</button>
+
+                    <?php
+                    echo '<h2>Nome:</h2>';
+                    echo '<h5>'.  $Nome_ADM . '</h5>';
+
+                    echo '<h2>Email:</h2>';
+                    echo '<h5>'.  $Email_ADM . '</h5>';
+
+                    echo '<h2>Celular:</h2>';
+                    echo '<h5>'.  $Celular_ADM . '</h5>';
+
+                    echo '<h2>Nascimento:</h2>';
+                    echo '<h5>'.  $Nascimento_ADM . '</h5>';
+
+                    ?>
+
                     </div>
                 </div>
                   <div class="vl"></div>
@@ -85,32 +87,32 @@ $logado = $_SESSION['Email_ADM'];
                 <div class="nav__list">
                     <div class="nav__items">
 
-    <!-- Mudar p/ gest de usu -->  <a href="../Solicitacoes.html" class="nav__link">
+    <!-- Mudar p/ gest de usu -->  <a href="../Solicitacoes.php" class="nav__link">
                             <i class="bx bx-user nav__icon"></i>
                             <span class="nav__name">Gestão de Usuários</span>
                         </a>
 
-                        <a href="../Gestão de Conteúdos/conteudos.html" class="nav__link">
+                        <a href="../Gestão de Conteúdos/conteudos.php" class="nav__link">
                             <i class="bx bx-receipt nav__icon"></i>
                             <span class="nav__name">Gestão de Conteúdos</span>
                         </a>
 
-                        <a href="../Políticas e Diretrizes/politicas.html" class="nav__link">
+                        <a href="../Políticas e Diretrizes/politicas.php" class="nav__link">
                             <i class="bx bx-cog nav__icon"></i>
                             <span class="nav__name">Configurações do<br>Sistema</span>
                         </a>
 
-                        <a href="../Suporte Técnico/suporte.html" class="nav__link">
+                        <a href="../Suporte Técnico/suporte.php" class="nav__link">
                             <i class="bx bx-message-rounded nav__icon"></i>
                             <span class="nav__name">Suporte Técnico</span>
                         </a>
 
-                        <a href="../Gráficos/graficos.html" class="nav__link">
+                        <a href="../Gráficos/graficos.php" class="nav__link">
                             <i class="bx bx-line-chart nav__icon"></i>
                             <span class="nav__name">Monitoramento de<br>Atividades</span>
                         </a>
 
-                        <a href="../Perfil/perfil.html" class="nav__link">
+                        <a href="../Perfil/perfil.php" class="nav__link">
                             <i class="bx bx-id-card nav__icon"></i>
                             <span class="nav__name">Meu Perfil</span>
                         </a>
