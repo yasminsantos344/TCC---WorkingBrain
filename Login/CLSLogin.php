@@ -62,21 +62,6 @@ class Login{
             $comando -> bindParam(1, $this -> Email_Aluno);
             $comando -> bindParam(2, $this -> Senha_Aluno);
 
-            /*$MySQL = $comando -> execute();
-            
-
-            $resultado = mysqli_num_rows($MySQL);
-           echo $resultado;
-           exit;
-                if($resultado == 1){
-                    $_SESSION['usuarioAluno'];
-                    $retorno =  'Porra';
-                    
-                }
-                
-                else{
-                    $retorno = 'Não encontrado';
-                }*/
                 if($comando -> execute()){
                     $retorno =  $comando -> fetchALL(PDO::FETCH_ASSOC);
                 }

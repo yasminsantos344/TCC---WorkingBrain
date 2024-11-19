@@ -109,6 +109,8 @@ $logado = $_SESSION['Email_Aluno'];
     </section>
     <section class="progresso">
       <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,500 L 0,500 C 202.5,358 405,216 645,216 C 885,216 1162.5,358 1440,500 L 1440,500 L 0,500 Z" stroke="none" stroke-width="0" fill="#aec6cf" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 250)"></path></svg>
+    
+      <button class="btn__conclusao" id="btn">Marcar como Concluído</button>
     </section>
     <footer>
       <div class="container">
@@ -131,6 +133,7 @@ $logado = $_SESSION['Email_Aluno'];
     </footer>
 
     <script src="../Aula01-Português/js/conclusao_aula.js"></script>
+    
 
     <!--Bootstrap scripts-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

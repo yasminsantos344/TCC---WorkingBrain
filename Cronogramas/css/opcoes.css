@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    width: auto;
+    height: auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+}
+
+body {
+    font-family: "League Spartan", sans-serif;
+    padding: 5%;
+    background-color: #6893EF;
+}
+
+form {
+    background-color: #CAE8F3;
+    padding: 5%;
+    padding-left: 20%;
+    border-radius: 25px;
+    box-shadow: 7px 6px 21px 5px #2525257c;
+}
+
+h1 {
+    padding-bottom: 2%;
+}
+
+h2 {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    font-weight: 500;
+}
+
+label {
+    font-size: large;
+}
+
+.button__enviar {
+    background-color: #CAE8F3;
+    border-radius: 10px;
+    border: 5px solid #6893EF;
+    padding: 1.5%;
+    width: 15%;
+    margin-top: 3%;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.button__enviar:hover{
+    background-color: #6893EF;
+    cursor: pointer;
+}
+
+.logo-1, .logo-2 {
+    position: absolute;
+    width: 37%; /* Ajuste conforme necessário */
+    opacity: 0.3; /* Deixa as imagens mais suaves no fundo */
+}
+
+.logo-1 {
+    bottom: 20%;
+    left: 63%;
+}
+
+.logo-2 {
+    top: 75%;
+    right: 73%;
+}
+
+@media screen and (max-width: 600px) {
+    form {
+        padding-left: 0%;
+        padding: 10%;
+    }
+    h1 {
+        padding-bottom: 5%;
+    }
+    h2 {
+        padding-bottom: 10%;
+        padding-top: 10%;
+        font-weight: 500;
+        font-size: larger;
+    }
+    .button__enviar {
+        width: 50%;
+        margin-top: 10%;
+        margin-left: 24%;
+        font-size: larger;
+        font-weight: 600;
+    }
+    .logo-1, .logo-2 {
+        position: absolute;
+        width: 55%; /* Ajuste conforme necessário */
+        opacity: 0.3; /* Deixa as imagens mais suaves no fundo */
+    }
+    
+    .logo-1 {
+        bottom: 75%;
+        left: 45%;
+    }
+    
+    .logo-2 {
+        top: 80%;
+        right: 67%;
+    }
+}

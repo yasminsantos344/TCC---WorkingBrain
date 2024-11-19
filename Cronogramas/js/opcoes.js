@@ -8,7 +8,7 @@ function CronogramaAluno(){
     })
 
     .done(function(){
-        window.location.replace("http://localhost/TCC---WorkingBrain-main/Aluno/HomeAluno.html");
+        window.location.replace("http://localhost/TCC---WorkingBrain-main/Login/Login.html");
     })
 
     .fail(function(){

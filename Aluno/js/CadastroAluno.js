@@ -27,10 +27,10 @@ function FCadastroAluno (){
                 $("#resultado").html(dadosPHP);
                 resposta.classList.add("ativo");
 
-                if(dadosPHP = 'Matrícula realizada com sucesso!'){
-                    //setTimeout(function(){
-                    //window.location.replace("http://localhost/TCC---WorkingBrain-main/Cronogramas/Opcoes.html");
-                //}, 3000);
+                if(dadosPHP = "Matrícula realizada com sucesso!"){
+                    setTimeout(function(){
+                    window.location.replace("http://localhost/TCC---WorkingBrain-main/Cronogramas/Opcoes.html");
+                }, 1800);
                 }
 
                 

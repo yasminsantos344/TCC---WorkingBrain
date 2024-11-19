@@ -43,7 +43,6 @@ if(ISSET($_GET["LoginAluno"])){
         }
     }
 
-    //echo $Log -> LoginAluno();
 }
 
 else if(ISSET($_GET["LoginProfessor"])){
@@ -60,7 +59,7 @@ else if(ISSET($_GET["LoginProfessor"])){
         foreach($Dados as $Dd){
             //array
             if($Dd['Email_Professor'] == $Email_Professor && $Dd['Senha_Professor'] == $Senha_Professor){
-                echo "sucesso";
+                echo 'Sucesso';
 
                 session_start();
                 $_SESSION['Email_Professor'] = $Email_Professor;

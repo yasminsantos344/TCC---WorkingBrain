@@ -3,7 +3,7 @@ function SolicitaAula(){
 
    $.ajax({
     method: 'GET',
-    url: 'ContrAula.php?LinkAula',
+    url: '../ContrProfessor.php?LinkAula',
     data: Link,
    })
 

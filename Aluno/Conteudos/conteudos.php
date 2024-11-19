@@ -52,7 +52,7 @@ $logado = $_SESSION['Email_Aluno'];
         <!--Linha 1 - Cards-->
         <div class="row">
             <div class="col">
-            <a href="../Conteudos - Portugues/portugues.html">
+            <a href="../Conteudos - Portugues/portugues.php">
               <div class="card">
                 <div class="card-body">
                     <img src="assets/icons-materias/icon matéria-portugues.svg" style="padding-top: 2rem;">
@@ -62,7 +62,7 @@ $logado = $_SESSION['Email_Aluno'];
             </a>
             </div>
             <div class="col">
-                <a href="../Conteudos - Literatura/literatura.html"> 
+                <a href="../Conteudos - Literatura/literatura.php"> 
               <div class="card">
                 <div class="card-body">
                     <img src="assets/icons-materias/icon matéria-literatura.svg" alt="">
@@ -72,7 +72,7 @@ $logado = $_SESSION['Email_Aluno'];
             </a> 
             </div>
             <div class="col">
-                <a href="../Conteudos - Redação/redacao.html">
+                <a href="../Conteudos - Redação/redacao.php">
                 <div class="card">
                   <div class="card-body">
                     <img src="assets/icons-materias/icon matéria-redação.svg" style="padding-top: 2rem;">
@@ -82,7 +82,7 @@ $logado = $_SESSION['Email_Aluno'];
                 </a>
               </div>
               <div class="col">
-                <a href="../Conteudos - Inglês/ingles.html">
+                <a href="../Conteudos - Inglês/ingles.php">
                 <div class="card">
                   <div class="card-body">
                     <img src="assets/icons-materias/icon matéria-ingles.svg" alt="">
@@ -96,7 +96,7 @@ $logado = $_SESSION['Email_Aluno'];
           <!--Linha 2 - Cards-->
           <div class="row">
             <div class="col">
-                <a href="../Conteudos - Espanhol/espanhol.html">
+                <a href="../Conteudos - Espanhol/espanhol.php">
                 <div class="card">
                   <div class="card-body">
                       <img src="assets/icons-materias/icon matéria-espanhol.svg">
@@ -106,7 +106,7 @@ $logado = $_SESSION['Email_Aluno'];
             </a>
               </div>
               <div class="col">
-                <a href="../Conteudos - Matemática/matematica.html">
+                <a href="../Conteudos - Matemática/matematica.php">
                 <div class="card">
                   <div class="card-body">
                       <img src="assets/icons-materias/icon matéria-matematica.svg" style="padding-top: 0.5rem;">
@@ -116,7 +116,7 @@ $logado = $_SESSION['Email_Aluno'];
             </a>
               </div>
               <div class="col">
-                <a href="../Conteudos - Geometria/geometria.html">
+                <a href="../Conteudos - Geometria/geometria.php">
                   <div class="card">
                     <div class="card-body">
                       <img src="assets/icons-materias/icon matéria-geometria.svg">
@@ -126,7 +126,7 @@ $logado = $_SESSION['Email_Aluno'];
                 </a>
                 </div>
                 <div class="col">
-                    <a href="../Conteudos - Artes/artes.html">
+                    <a href="../Conteudos - Artes/artes.php">
                   <div class="card">
                     <div class="card-body">
                       <img src="assets/icons-materias/icon matéria-artes.svg" style="padding-top: 2rem;">
@@ -140,7 +140,7 @@ $logado = $_SESSION['Email_Aluno'];
             <!--Linha 3 - Cards-->
           <div class="row">
             <div class="col">
-                <a href="../Conteudos - Física/fisica.html">
+                <a href="../Conteudos - Física/fisica.php">
                 <div class="card">
                   <div class="card-body">
                       <img src="assets/icons-materias/icon matéria-fisica.svg">
@@ -150,7 +150,7 @@ $logado = $_SESSION['Email_Aluno'];
             </a>
               </div>
               <div class="col">
-                <a href="../Conteudos - Química/quimica.html">
+                <a href="../Conteudos - Química/quimica.php">
                 <div class="card">
                   <div class="card-body">
                       <img src="assets/icons-materias/icon matéria-quimica.svg" style="padding-top: 1rem;">
@@ -160,7 +160,7 @@ $logado = $_SESSION['Email_Aluno'];
             </a>
               </div>
               <div class="col">
-                <a href="../Conteudos - Biologia/biologia.html">
+                <a href="../Conteudos - Biologia/biologia.php">
                   <div class="card">
                     <div class="card-body">
                       <img src="assets/icons-materias/icon matéria-biologia.svg" style="padding-top: 0.5rem;">
@@ -170,7 +170,7 @@ $logado = $_SESSION['Email_Aluno'];
                 </a>
                 </div>
                 <div class="col">
-                    <a href="../Conteudos - Educação Física/educacao_fisica.html">
+                    <a href="../Conteudos - Educação Física/educacao_fisica.php">
                   <div class="card">
                     <div class="card-body">
                       <img src="assets/icons-materias/icon matéria-educação-fisica.svg" alt="">
@@ -184,7 +184,7 @@ $logado = $_SESSION['Email_Aluno'];
             <!--Linha 4 - Cards-->
           <div class="row">
             <div class="col">
-                <a href="../Conteudos - História/historia.html">
+                <a href="../Conteudos - História/historia.php">
                 <div class="card">
                   <div class="card-body">
                       <img src="assets/icons-materias/icon matéria-historia.svg" style="padding-top: 2rem;">
@@ -194,7 +194,7 @@ $logado = $_SESSION['Email_Aluno'];
             </a>
               </div>
               <div class="col">
-                <a href="../Conteudos - Geografia/geografia.html">
+                <a href="../Conteudos - Geografia/geografia.php">
                 <div class="card">
                   <div class="card-body">
                       <img src="assets/icons-materias/icon matéria-geografia.svg" alt="">
@@ -204,7 +204,7 @@ $logado = $_SESSION['Email_Aluno'];
             </a>
               </div>
               <div class="col">
-                <a href="../Conteudos - Sociologia/sociologia.html">
+                <a href="../Conteudos - Sociologia/sociologia.php">
                   <div class="card">
                     <div class="card-body">
                       <img src="assets/icons-materias/icon matéria-sociologia.svg" style="padding-top: 2rem;">
@@ -214,7 +214,7 @@ $logado = $_SESSION['Email_Aluno'];
                 </a>
                 </div>
                 <div class="col">
-                    <a href="../Conteudos - Filosofia/filosofia.html">
+                    <a href="../Conteudos - Filosofia/filosofia.php">
                   <div class="card">
                     <div class="card-body">
                       <img src="assets/icons-materias/icon matéria-filosofia.svg" alt="">
@@ -251,6 +251,8 @@ $logado = $_SESSION['Email_Aluno'];
               </div>
             </div>
         </div>
+
+
     </section>
     <footer>
       <div class="container">
@@ -273,6 +275,7 @@ $logado = $_SESSION['Email_Aluno'];
     </footer>
 
     <!--Bootstrap scripts-->
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>

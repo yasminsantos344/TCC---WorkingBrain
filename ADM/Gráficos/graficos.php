@@ -70,11 +70,6 @@ $logado = $_SESSION['Email_ADM'];
                             <span class="nav__name">Configurações do<br>Sistema</span>
                         </a>
 
-                        <a href="../Suporte Técnico/suporte.php" class="nav__link">
-                            <i class="bx bx-message-rounded nav__icon"></i>
-                            <span class="nav__name">Suporte Técnico</span>
-                        </a>
-
                         <a href="../Gráficos/graficos.php" class="nav__link">
                             <i class="bx bx-line-chart nav__icon"></i>
                             <span class="nav__name">Monitoramento de<br>Atividades</span>

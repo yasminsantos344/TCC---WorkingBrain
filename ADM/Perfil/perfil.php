@@ -87,7 +87,7 @@ if((!isset ($_SESSION['Email_ADM']) == true) and (!isset ($_SESSION['Senha_ADM']
                 <div class="nav__list">
                     <div class="nav__items">
 
-    <!-- Mudar p/ gest de usu -->  <a href="../Solicitacoes.php" class="nav__link">
+                        <a href="../Gestão de Usuários/gestão_usuarios.php" class="nav__link">
                             <i class="bx bx-user nav__icon"></i>
                             <span class="nav__name">Gestão de Usuários</span>
                         </a>
@@ -100,11 +100,6 @@ if((!isset ($_SESSION['Email_ADM']) == true) and (!isset ($_SESSION['Senha_ADM']
                         <a href="../Políticas e Diretrizes/politicas.php" class="nav__link">
                             <i class="bx bx-cog nav__icon"></i>
                             <span class="nav__name">Configurações do<br>Sistema</span>
-                        </a>
-
-                        <a href="../Suporte Técnico/suporte.php" class="nav__link">
-                            <i class="bx bx-message-rounded nav__icon"></i>
-                            <span class="nav__name">Suporte Técnico</span>
                         </a>
 
                         <a href="../Gráficos/graficos.php" class="nav__link">

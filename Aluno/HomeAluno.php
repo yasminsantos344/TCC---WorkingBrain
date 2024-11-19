@@ -25,7 +25,7 @@ $logado = $_SESSION['Email_Aluno'];
 <body class="d-md-flex d-lg-block">
     <nav class="navbar d-lg-flex d-md-none">
         <div class="container">
-            <a href="../Aluno/Conteudos/conteudos.html" class="navbar d-flex"><img src="../Aluno/assets/brainbox.png" alt="Logo" srcset="" id="logo"></a>
+            <a href="../Aluno/Conteudos/conteudos.php" class="navbar d-flex"><img src="../Aluno/assets/brainbox.png" alt="Logo" srcset="" id="logo"></a>
                 <div class="search-box">
                     <form class="input-group d-flex">
                         <input type ="text" name ="search" id ="srch" placeholder="">

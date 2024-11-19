@@ -4,59 +4,75 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Cronogramas/css/opcoes.css">
     <title>Monte sua rotina!</title>
 </head>
 <body>
 
+    <img src="assets/workingbrain-blue.svg" class="logo-1">
+
     <form action="" method="get" id="FormCronograma">
-        <h1>Monte seu cronograma</h1>
+        <h1>Monte seu Cronograma</h1>
 
-        <h2>Selecione o Objetivo do seu cronograma</h2>
+        <h2>Selecione o objetivo do seu Cronograma:</h2>
 
-        <label for="">Homeschooling</label>
-        <input type="radio" name="Objetivo" id="homeschooling" value="homeschooling"><br>
 
-        <label for="Reforço">Reforço</label>
-        <input type="radio" name="Objetivo" id="reforco" value="reforco"><br>
+        <input type="radio" name="Objetivo" id="homeschooling" value="homeschooling">
+        <label for="">Homeschooling</label><br>
 
-        <label for="vestibular">Vestibular</label>
-        <input type="radio" name="Objetivo" id="vestibular" value="vestibular"><br>
+
+        <input type="radio" name="Objetivo" id="reforco" value="reforco">
+        <label for="Reforço">Reforço</label><br>
+
+
+        <input type="radio" name="Objetivo" id="vestibular" value="vestibular">
+        <label for="vestibular">Vestibular</label><br>
 
         <h2>Selecione os dias da semana que deseja:</h2>
 
-        <label for="s">Dom</label>
+
         <input type="checkbox" name="Dom" id="dom" value="1">
+        <label for="s">Dom</label><br>
 
-        <label for="s">Seg</label>
-        <input type="checkbox" name="Seg" id="seg" value="2"><br>
-        
-        <label for="s">Ter</label>
-        <input type="checkbox" name="Ter" id="ter" value="3"><br>
 
-        <label for="s">Qua</label>
-        <input type="checkbox" name="Qua" id="qua" value="4"><br>
+        <input type="checkbox" name="Seg" id="seg" value="2">
+        <label for="s">Seg</label><br>
 
-        <label for="s">Qui</label>
-        <input type="checkbox" name="Qui" id="qui" value="5"><br>
 
-        <label for="s">Sex</label>
-        <input type="checkbox" name="Sex" id="sex" value="6"><br>
+        <input type="checkbox" name="Ter" id="ter" value="3">
+        <label for="s">Ter</label><br>
 
-        <label for="s">Sab</label>
-        <input type="checkbox" name="Sab" id="sab" value="7"><br>
+
+        <input type="checkbox" name="Qua" id="qua" value="4">
+        <label for="s">Qua</label><br>
+
+
+        <input type="checkbox" name="Qui" id="qui" value="5">
+        <label for="s">Qui</label><br>
+
+
+        <input type="checkbox" name="Sex" id="sex" value="6">
+        <label for="s">Sex</label><br>
+
+
+        <input type="checkbox" name="Sab" id="sab" value="7">
+        <label for="s">Sab</label><br>
 
         <h2>Escolha o nível que voçê se encontra:</h2>
         
-        <label for="fundi">Fundamental I</label>
-        <input type="radio" name="Nivel" id="nivelfundi" value="fundI"><br>
 
-        <label for="fundii">Fundamental II</label>
-        <input type="radio" name="Nivel" id="nivelfundii" value="fundII"><br>
+        <input type="radio" name="Nivel" id="nivelfundi" value="fundI">
+        <label for="fundi">Fundamental I</label><br>
 
-        <label for="medio">Ensino Médio</label>
-        <input type="radio" name="Nivel" id="nivelmedio" value="medio"><br>
 
-        <input type="button" value="Finalizar" name="finalizar" id="finalizar" onclick="CronogramaAluno()" >
+        <input type="radio" name="Nivel" id="nivelfundii" value="fundII">
+        <label for="fundii">Fundamental II</label><br>
+
+
+        <input type="radio" name="Nivel" id="nivelmedio" value="medio">
+        <label for="medio">Ensino Médio</label><br>
+
+        <input type="button" class="button__enviar" value="Finalizar" name="finalizar" id="finalizar" onclick="CronogramaAluno()" >
     </form>
        
     <script src="../Cronogramas/js/opcoes.js"></script>

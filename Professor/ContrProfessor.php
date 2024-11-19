@@ -34,7 +34,20 @@ $CadP -> setUF_Professor($UF_Professor);
 $CadP -> setEndereco_Numero_Professor($Endereco_Numero_Professor);
 $CadP -> setEndereco_Complemento_Professor($Endereco_Complemento_Professor);
 
+
+$Link_Aula    = filter_input(INPUT_GET, "Link_Aula");
+$Assunto_Aula = filter_input(INPUT_GET, "Assunto_Aula");
+$ID_Materia = filter_input(INPUT_GET, "materia");
+
+$CadP -> setLink_Aula($Link_Aula);
+$CadP -> setAssunto_Aula($Assunto_Aula);
+$CadP -> setID_Materia($ID_Materia);
+
+
 if(isset($_GET["Solicitar"])){
     echo $CadP -> Solicitar();
 }
 
+else if(isset($_GET["LinkAula"])){
+    echo $CadP -> SolicitarAula();
+}

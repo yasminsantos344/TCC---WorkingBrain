@@ -52,7 +52,7 @@ function FLoginProfessor(){
    })
 
    .done(function(dadosPHP){
-        if(dadosPHP == 'sucesso'){
+        if(dadosPHP === 'Sucesso'){
             window.location.replace("http://localhost/TCC---WorkingBrain-main/Professor/HomeProfessor.php");
         }
 

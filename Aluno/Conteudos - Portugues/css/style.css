@@ -151,6 +151,41 @@ background: linear-gradient(0deg, rgba(174,198,207,1) 0%, rgba(242,242,242,1) 5%
     background-color: #f2f2f2;
 }
 
+.btn__conclusao {
+    width: 30%;
+    padding: 3%;
+    margin: 5%;
+    border-radius: 20px;
+    background-color: #AEC6CF;
+    border: 5px solid #74868d;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 500;
+    font-size: xx-large;
+}
+
+.conclusao {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.btn__conclusao{
+    width: 30%;
+    padding: 3%;
+    margin: 5%;
+    margin-top: 0%;
+    border-radius: 20px;
+    background-color: #AEC6CF;
+    border: 5px solid #74868d;
+    font-family: "League Spartan", sans serif;
+    font-weight: 500;
+    font-size: xx-large;
+}
+
+.btn__conclusao:hover{
+    background-color: #74868d;
+    border: 5px solid #AEC6CF;
+}
+
 footer {
     padding: 2rem;
     background-color: #F0CDCD;

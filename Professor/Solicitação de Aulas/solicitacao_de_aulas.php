@@ -16,6 +16,7 @@ $logado = $_SESSION['Email_Professor'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorkingBrain</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/solicitacao_de_aulas.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -66,7 +67,7 @@ $logado = $_SESSION['Email_Professor'];
         </div>
       </section>
 
-      <form action="" method="get">
+      <form action="" method="get" id="FormLink">
       <section class="cards">
         <h1><b>Escolha a Matéria:</b></h1><br><br><br>
         <!--Linha 1 - Cards-->
@@ -76,7 +77,7 @@ $logado = $_SESSION['Email_Professor'];
                 <div class="card-body">
                     <img src="assets/icons-materias/portugues.svg">
                     <h5 class="card-title">Português</h5>
-                      <li><input type="radio" id="rad1" value="1" name="radios"/>
+                      <li><input type="radio" id="rad1" value="1" name="materia"/>
                         <label for="rad1">
                           <span class="outer">
                             <span class="inner"></span>
@@ -91,7 +92,7 @@ $logado = $_SESSION['Email_Professor'];
                 <div class="card-body">
                     <img src="assets/icons-materias/literatura.svg" alt="">
                     <h5 class="card-title">Literatura</h5>
-                    <li><input type="radio" id="rad2" value="8" name="radios"/>
+                    <li><input type="radio" id="rad2" value="8" name="materia"/>
                       <label for="rad2">
                         <span class="outer">
                           <span class="inner"></span>
@@ -106,7 +107,7 @@ $logado = $_SESSION['Email_Professor'];
                   <div class="card-body">
                     <img src="assets/icons-materias/redacao.svg">
                     <h5 class="card-title">Redação</h5>
-                    <li><input type="radio" id="rad3" value="9" name="radios"/>
+                    <li><input type="radio" id="rad3" value="9" name="materia"/>
                       <label for="rad3">
                         <span class="outer">
                           <span class="inner"></span>
@@ -121,7 +122,7 @@ $logado = $_SESSION['Email_Professor'];
                   <div class="card-body">
                     <img src="assets/icons-materias/ingles.svg">
                     <h5 class="card-title">Inglês</h5>
-                    <li><input type="radio" id="rad4" value="10" name="radios"/>
+                    <li><input type="radio" id="rad4" value="10" name="materia"/>
                       <label for="rad4">
                         <span class="outer">
                           <span class="inner"></span>
@@ -140,7 +141,7 @@ $logado = $_SESSION['Email_Professor'];
                   <div class="card-body">
                       <img src="assets/icons-materias/espanhol.svg">
                     <h5 class="card-title">Espanhol</h5>
-                    <li><input type="radio" id="rad5" value="11" name="radios"/>
+                    <li><input type="radio" id="rad5" value="11" name="materia"/>
                       <label for="rad5">
                         <span class="outer">
                           <span class="inner"></span>
@@ -155,7 +156,7 @@ $logado = $_SESSION['Email_Professor'];
                   <div class="card-body">
                       <img src="assets/icons-materias/matematica.svg">
                     <h5 class="card-title">Matemática</h5>
-                    <li><input type="radio" id="rad6" value="2" name="radios"/>
+                    <li><input type="radio" id="rad6" value="2" name="materia"/>
                       <label for="rad6">
                         <span class="outer">
                           <span class="inner"></span>
@@ -170,7 +171,7 @@ $logado = $_SESSION['Email_Professor'];
                     <div class="card-body">
                       <img src="assets/icons-materias/geometria.svg">
                       <h5 class="card-title">Geometria</h5>
-                      <li><input type="radio" id="rad7" name="radios"/>
+                      <li><input type="radio" id="rad7" name="materia"/>
                         <label for="rad7">
                           <span class="outer">
                             <span class="inner"></span>
@@ -185,7 +186,7 @@ $logado = $_SESSION['Email_Professor'];
                     <div class="card-body">
                       <img src="assets/icons-materias/artes.svg">
                       <h5 class="card-title">Artes</h5>
-                      <li><input type="radio" id="rad8" value="24" name="radios"/>
+                      <li><input type="radio" id="rad8" value="24" name="materia"/>
                         <label for="rad8">
                           <span class="outer">
                             <span class="inner"></span>
@@ -204,7 +205,7 @@ $logado = $_SESSION['Email_Professor'];
                   <div class="card-body">
                       <img src="assets/icons-materias/fisica.svg">
                     <h5 class="card-title">Física</h5>
-                    <li><input type="radio" id="rad9" value="19" name="radios"/>
+                    <li><input type="radio" id="rad9" value="19" name="materia"/>
                       <label for="rad9">
                         <span class="outer">
                           <span class="inner"></span>
@@ -219,7 +220,7 @@ $logado = $_SESSION['Email_Professor'];
                   <div class="card-body">
                       <img src="assets/icons-materias/quimica.svg">
                     <h5 class="card-title">Química</h5>
-                    <li><input type="radio" id="rad10" value="18" name="radios"/>
+                    <li><input type="radio" id="rad10" value="18" name="materia"/>
                       <label for="rad10">
                         <span class="outer">
                           <span class="inner"></span>
@@ -234,7 +235,7 @@ $logado = $_SESSION['Email_Professor'];
                     <div class="card-body">
                       <img src="assets/icons-materias/biologia.svg">
                       <h5 class="card-title">Biologia</h5>
-                      <li><input type="radio" id="rad11" value="17" name="radios"/>
+                      <li><input type="radio" id="rad11" value="17" name="materia"/>
                         <label for="rad11">
                           <span class="outer">
                             <span class="inner"></span>
@@ -249,7 +250,7 @@ $logado = $_SESSION['Email_Professor'];
                     <div class="card-body">
                       <img src="assets/icons-materias/educacao.svg" alt="">
                       <h5 class="card-title">Educação-Física</h5>
-                      <li><input type="radio" id="rad12" value="25" name="radios"/>
+                      <li><input type="radio" id="rad12" value="25" name="materia"/>
                         <label for="rad12">
                           <span class="outer">
                             <span class="inner"></span>
@@ -268,7 +269,7 @@ $logado = $_SESSION['Email_Professor'];
                   <div class="card-body">
                       <img src="assets/icons-materias/historia.svg">
                     <h5 class="card-title">História</h5>
-                    <li><input type="radio" id="rad13" value="3" name="radios"/>
+                    <li><input type="radio" id="rad13" value="3" name="materia"/>
                       <label for="rad13">
                         <span class="outer">
                           <span class="inner"></span>
@@ -283,7 +284,7 @@ $logado = $_SESSION['Email_Professor'];
                   <div class="card-body">
                       <img src="assets/icons-materias/geografia.svg" alt="">
                     <h5 class="card-title">Geografia</h5>
-                    <li><input type="radio" id="rad14" value="4" name="radios"/>
+                    <li><input type="radio" id="rad14" value="4" name="materia"/>
                       <label for="rad14">
                         <span class="outer">
                           <span class="inner"></span>
@@ -298,7 +299,7 @@ $logado = $_SESSION['Email_Professor'];
                     <div class="card-body">
                       <img src="assets/icons-materias/sociologia.svg">
                       <h5 class="card-title">Sociologia</h5>
-                      <li><input type="radio" id="rad15" value="5" name="radios"/>
+                      <li><input type="radio" id="rad15" value="5" name="materia"/>
                         <label for="rad15">
                           <span class="outer">
                             <span class="inner"></span>
@@ -313,7 +314,7 @@ $logado = $_SESSION['Email_Professor'];
                     <div class="card-body">
                       <img src="assets/icons-materias/filosofia.svg" alt="">
                       <h5 class="card-title">Filosofia</h5>
-                      <li><input type="radio" id="rad16" value="6" name="radios"/>
+                      <li><input type="radio" id="rad16" value="6" name="materia"/>
                         <label for="rad16">
                           <span class="outer">
                             <span class="inner"></span>
@@ -372,6 +373,6 @@ $logado = $_SESSION['Email_Professor'];
   integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
   crossorigin="anonymous"></script>
 
-  <script src="../Aulas/Aula.js"></script>
+  <script src="../js/Aula.js"></script>
 </body>
 </html>

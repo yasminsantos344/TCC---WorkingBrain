@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+if((!isset ($_SESSION['Email_Aluno']) == true) and (!isset ($_SESSION['Senha_Aluno']) == true))
+{
+  header('location:http://localhost/TCC---WorkingBrain-main/');
+
+  }
+
+$logado = $_SESSION['Email_Aluno'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
