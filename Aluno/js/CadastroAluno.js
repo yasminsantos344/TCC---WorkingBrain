@@ -132,7 +132,7 @@ CEP_Aluno.addEventListener('focusout', async () => {
 //CPF Verify
 
 function verificacaoCPF(){
-    //484.943.238-73 (11 dígitos)
+    
 
     var CPF_Aluno = document.querySelector('#CPF_Aluno').value;   
     let myFunc = num => Number(num);
